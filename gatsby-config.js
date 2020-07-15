@@ -27,6 +27,18 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: '510i3x4t',
+        dataset: 'production',
+        // To enable preview of drafts, copy .env-example into .env,
+        // and add a token with read permissions
+        //token: process.env.SANITY_TOKEN,
+        watchMode: true,
+        overlayDrafts: true
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
