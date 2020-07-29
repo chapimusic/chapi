@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Chapi Chapo`,
+    description: `Chapi Chapo toy music`,
+    author: `@chapichapotoymusic`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Chapi Chapo`,
+        short_name: `chapimusic`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#cb1a3b`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/chapi-music.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -36,11 +36,27 @@ module.exports = {
         // and add a token with read permissions
         //token: process.env.SANITY_TOKEN,
         watchMode: true,
-        overlayDrafts: true
-      }
-    }
+        overlayDrafts: true,
+      },
+    },
+    `gatsby-plugin-theme-ui`,
+    {
+      resolve: 'gatsby-theme-style-guide',
+      options: {
+        // sets path for generated page
+        basePath: '/design-system',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /svgs/, // See below to configure properly
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
