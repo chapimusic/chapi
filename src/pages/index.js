@@ -13,21 +13,9 @@ const IndexPage = () => (
     <Box
       sx={{
         position: 'relative',
-        overflow: 'hidden',
         background: 'url(/arc.svg)',
-        backgroundRepeat: 'no-repeat',
-        //background: 'transparent',
-        '::before': {
-          content: '""',
-          position: 'absolute',
-          width: '20vw',
-          height: '100%',
-          top: 0,
-          bottom: '0',
-          left: '0',
-          zIndex: '0',
-          //transform: 'rotate(60deg)',
-        },
+        backgroundRepeat: 'repeat-y',
+        height: '100%',
       }}
     >
       <Box
