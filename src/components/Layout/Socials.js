@@ -23,6 +23,7 @@ export const Socials = props => {
         sx={{
           listStyle: 'none',
           justifyContent: 'center',
+          p: 0,
           '&>li': {display: 'inline-flex', pl: 3},
         }}
       >

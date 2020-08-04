@@ -19,6 +19,7 @@ export default {
     pink: '#bf5e9e',
     purple: '#814490',
     orange: '#ed7c20',
+    gray: '#444',
   },
   fonts: {
     ...tailwind.fonts,
@@ -33,8 +34,8 @@ export default {
       color: 'white',
       ':hover': {
         cursor: 'pointer',
-        bg: 'white',
-        color: 'text',
+        bg: 'red.0',
+        color: 'white',
         boxShadow: '0px 1px 10px rgba(0,0,0,0.25)',
       },
     },
@@ -43,7 +44,7 @@ export default {
     ...tailwind.styles,
     h1: {
       ...tailwind.styles.h1,
-      fontFamily: 'heading',
+      //fontFamily: 'heading',
       fontFamily: '"Raleway", sans-serif',
       fontWeight: '100',
       fontSize: [5, 6, 7],
@@ -57,6 +58,12 @@ export default {
       fontFamily: '"Raleway", sans-serif',
       fontWeight: '800',
       fontSize: [1, 2, 4, 5],
+    },
+    h3: {
+      m: 0,
+      p: 0,
+      'margin-block-start': 0,
+      'margin-block-end': 0,
     },
     root: {
       ...tailwind.styles.root,
@@ -116,7 +123,7 @@ export default {
       },
     },
     footer: {
-      bg: 'lightblue',
+      bg: 'darkblue',
       color: 'white',
       a: {color: 'white'},
       p: 4,

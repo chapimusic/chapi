@@ -8,7 +8,10 @@ export const Footer = () => {
   return (
     <Box as="footer" sx={{variant: 'layout.footer'}}>
       <Box>
-        © {new Date().getFullYear()} <a href={url}>Chapi Chapo</a>
+        © {new Date().getFullYear()}{' '}
+        <a href={url} sx={{textDecoration: 'none'}}>
+          Chapi Chapo
+        </a>
         {` `}
       </Box>
       <Box>
