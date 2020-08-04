@@ -7,7 +7,7 @@ import SEO from '../components/SEO'
 const IndexPage = () => (
   <Layout>
     <Box sx={{bg: 'red.0', color: 'white', p: 4}}>
-      <Seo title="COLLECTOR, nouvel album" />
+      <SEO title="COLLECTOR, nouvel album" />
       <Collector />
     </Box>
     <Box

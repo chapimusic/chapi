@@ -21,7 +21,7 @@ const Boutique = ({data, errors}) => {
 
   return (
     <Layout>
-      <Seo title="Boutique" />
+      <SEO title="Boutique" />
       <Main>{productNodes && <Products nodes={productNodes} />}</Main>
     </Layout>
   )

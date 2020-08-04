@@ -27,7 +27,7 @@ const Musique = ({data, errors}) => {
 
   return (
     <Layout>
-      <Seo title="Musique" />
+      <SEO title="Musique" />
       <Main>{releaseNodes && <Releases nodes={releaseNodes} />}</Main>
     </Layout>
   )

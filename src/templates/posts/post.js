@@ -20,8 +20,8 @@ const PostPage = ({data, errors, ...props}) => {
   const body = _rawBody && toPlainText(_rawBody)
   return (
     <Layout {...props}>
-      {errors && <Seo title="GraphQL Error" />}
-      {post && <Seo title={title} description={body} image={image} />}
+      {errors && <SEO title="GraphQL Error" />}
+      {post && <SEO title={title} description={body} image={image} />}
 
       {errors && <GraphQLErrorList errors={errors} />}
 

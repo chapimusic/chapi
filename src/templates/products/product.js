@@ -19,8 +19,8 @@ const ProductPage = ({data, errors, ...props}) => {
   const body = _rawBody && toPlainText(_rawBody)
   return (
     <Layout {...props}>
-      {errors && <Seo title="GraphQL Error" />}
-      {product && <Seo title={title} description={body} image={image} />}
+      {errors && <SEO title="GraphQL Error" />}
+      {product && <SEO title={title} description={body} image={image} />}
 
       {errors && <GraphQLErrorList errors={errors} />}
 

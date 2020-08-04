@@ -21,7 +21,7 @@ const Nouvelles = ({data, errors}) => {
 
   return (
     <Layout>
-      <Seo title="Nouvelles" />
+      <SEO title="Nouvelles" />
       <Main>{postNodes && <Posts nodes={postNodes} />}</Main>
     </Layout>
   )
