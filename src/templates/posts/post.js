@@ -2,7 +2,7 @@
 import {graphql} from 'gatsby'
 import {Box, jsx, Styled} from 'theme-ui'
 import {GraphQLErrorList} from '../../components/GraphQLErrorList'
-import Seo from '../../components/Seo'
+import SEO from '../../components/SEO'
 import {Post} from '../../components/Posts/Post'
 import {Posts} from '../../components/Posts/'
 import {Layout} from '../../components/Layout'

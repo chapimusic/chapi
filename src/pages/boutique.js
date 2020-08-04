@@ -4,7 +4,7 @@ import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'
 import {Main} from '../components/Layout/Main'
 import {Products} from '../components/Products/'
-import Seo from '../components/Seo'
+import SEO from '../components/SEO'
 import {filterOutDocsWithoutSlugs, mapEdgesToNodes} from '../lib/helpers'
 
 const Boutique = ({data, errors}) => {

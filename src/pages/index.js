@@ -2,7 +2,7 @@
 import {Box, jsx} from 'theme-ui'
 import {Collector, Vinyle, Story} from '../components/Collector'
 import {Layout} from '../components/Layout'
-import Seo from '../components/Seo'
+import SEO from '../components/SEO'
 
 const IndexPage = () => (
   <Layout>

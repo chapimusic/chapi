@@ -12,7 +12,7 @@ import {Helmet} from 'react-helmet'
 import {truncateString} from '../lib/helpers'
 import {useSiteMetadata} from '../lib/useSiteMetadata'
 
-const Seo = ({
+const SEO = ({
   title,
   description,
   image,
@@ -71,7 +71,7 @@ const Seo = ({
   )
 }
 
-Seo.defaultProps = {
+SEO.defaultProps = {
   title: null,
   description: null,
   image: null,
@@ -79,7 +79,7 @@ Seo.defaultProps = {
   product: false,
 }
 
-Seo.propTypes = {
+SEO.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   image: PropTypes.string,
@@ -87,4 +87,4 @@ Seo.propTypes = {
   product: PropTypes.bool,
 }
 
-export default Seo
+export default SEO
