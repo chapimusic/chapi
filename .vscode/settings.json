@@ -1,0 +1,14 @@
+{
+  // The following will hide the js and map files in the editor
+  "files.exclude": {
+    "**/.yarn": true,
+    "**/.cache": true,
+    "**/node_modules": true,
+    "web/public": true,
+    "**/.lock": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"]
+}

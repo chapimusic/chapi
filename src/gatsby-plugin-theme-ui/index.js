@@ -77,6 +77,9 @@ export default {
     container: {
       bg: 'white',
     },
+    main: {
+      //minHeight: '50vh',
+    },
     header: {
       a: {
         color: 'primary',

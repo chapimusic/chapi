@@ -6,6 +6,7 @@ import {useSiteMetadata} from '../../lib/useSiteMetadata'
 import {Footer} from './Footer'
 import {Header} from './Header'
 import {Mobile as MobileMenu} from './Menu'
+import {Main} from './Main'
 
 export const MenuContext = React.createContext(false)
 
@@ -29,7 +30,7 @@ export const Layout = ({children}) => {
           }}
         >
           <Header siteTitle={title} />
-          <main>{children}</main>
+          <Main>{children}</Main>
           <Footer />
         </div>
       </Styled.root>
