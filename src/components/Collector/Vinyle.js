@@ -20,13 +20,18 @@ export const Vinyle = props => {
     <Grid
       gap={4}
       columns={[1, '300px auto']}
-      sx={{maxWidth: '1024px', mx: 'auto'}}
+      sx={{
+        maxWidth: '1024px',
+        mx: 'auto',
+      }}
       {...props}
     >
       <Box sx={{order: [1, 0], zIndex: 1}}>
         <Img
           fluid={data.speakAndSpell.childImageSharp.fluid}
-          sx={{maxWidth: '300px'}}
+          sx={{
+            maxWidth: '300px',
+          }}
         />
       </Box>
       <Box id="preorder" sx={{order: [0, 1], zIndex: 2}}>
