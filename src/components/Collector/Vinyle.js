@@ -70,7 +70,7 @@ export const Vinyle = props => {
           </Box>
           <Box>
             <p>
-              <h4>World</h4>19€ + 7,90€ including shipping costs
+              <h4>World</h4>19€ + 18,50€ including shipping costs
             </p>
             <form
               target="paypal"
@@ -81,7 +81,7 @@ export const Vinyle = props => {
               <input
                 type="hidden"
                 name="hosted_button_id"
-                value="PL2HFZDGKL6SC"
+                value="DVU67FAVMRRUE"
               />
               <Button className="btn-three">
                 <FaShoppingCart />
