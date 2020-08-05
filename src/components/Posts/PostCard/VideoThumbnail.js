@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import {jsx} from 'theme-ui'
-import Img from 'gatsby-image'
-import {Link, graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import getVideoId from 'get-video-id'
+import {jsx} from 'theme-ui'
 
 export const VideoThumbnail = ({video, link}) => {
   graphql`

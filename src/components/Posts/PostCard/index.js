@@ -14,6 +14,7 @@ export const PostCard = ({
   publishedAt,
   previewImages,
   videos,
+  ...props
 }) => {
   graphql`
     fragment postCardFields on SanityPost {
@@ -37,7 +38,7 @@ export const PostCard = ({
   const video = videos && videos[0]
   return (
     <li>
-      <Grid gap={0} columns={[1]} sx={{bg: 'green', minHeight: '350px'}}>
+      <Grid gap={0} columns={[1]} sx={{minHeight: '350px'}} {...props}>
         <Grid>
           {image ? (
             <Image image={image} link={postPath} />
