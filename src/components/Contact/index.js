@@ -24,7 +24,7 @@ export const Contact = props => {
         />
       </Box>
       <Box sx={{textAlign: ['left', 'center']}}>
-        <Styled.h1>Contact</Styled.h1>
+        {/*<Styled.h1>Contact</Styled.h1>*/}
         <p>contact@chapimusic.com</p>
       </Box>
     </Grid>
