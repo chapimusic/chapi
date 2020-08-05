@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import {IoIosArrowDropdown} from 'react-icons/io'
 import {Box, Grid, jsx, Styled} from 'theme-ui'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import SEO from '../SEO'
 
 export {Story} from './Story'
 export {Vinyle} from './Vinyle'
@@ -25,6 +26,10 @@ export const Collector = () => {
 
   return (
     <Grid gap={2} columns={[1]} sx={{maxWidth: '960px', mx: 'auto'}}>
+      <SEO
+        title="COLLECTOR, nouvel album"
+        image={data.collectorLP.childImageSharp.fluid.src}
+      />
       <Box sx={{textAlign: 'center'}}>
         <Styled.h1>Collector</Styled.h1>
         <Styled.h2>Nouvel album</Styled.h2>
