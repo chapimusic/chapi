@@ -54,6 +54,9 @@ export default {
       mt: 0,
       pt: 2,
     },
+    raleway: {
+      fontFamily: '"Raleway", sans-serif',
+    },
     h2: {
       textTransform: 'uppercase',
       fontFamily: '"Raleway", sans-serif',
@@ -78,9 +81,6 @@ export default {
       form: {
         margin: 0,
       },
-    },
-    handwrite: {
-      fontFamily: "'Satisfy', cursive",
     },
   },
   layout: {
@@ -120,7 +120,7 @@ export default {
         },
       },
       mobile: {
-        bg: 'green',
+        bg: 'red.0',
         position: 'fixed',
         height: '100%',
         display: ['block', 'block', 'block', 'none'],

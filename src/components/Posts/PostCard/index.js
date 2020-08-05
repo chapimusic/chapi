@@ -32,22 +32,24 @@ export const PostCard = ({
   const postPath = getPostPath({publishedAt, slug})
   const image = previewImages && previewImages[0]
   return (
-    <Grid gap={0} columns={[1, 2]} sx={{}}>
-      <Grid sx={{order: [0, 1]}}>
-        {image && <Image image={image} link={postPath} />}
+    <li>
+      <Grid gap={0} columns={[1, 2]} sx={{}}>
+        <Grid sx={{order: [0, 1]}}>
+          {image && <Image image={image} link={postPath} />}
+        </Grid>
+        <Box
+          p={4}
+          sx={{
+            display: 'grid',
+            order: [1, 0],
+            gap: 0,
+            minHeight: ['200px', '300px'],
+            alignItems: 'center',
+          }}
+        >
+          <Title title={title} link={postPath} />
+        </Box>
       </Grid>
-      <Box
-        p={4}
-        sx={{
-          display: 'grid',
-          order: [1, 0],
-          gap: 0,
-          minHeight: ['200px', '300px'],
-          alignItems: 'center',
-        }}
-      >
-        <Title title={title} link={postPath} />
-      </Box>
-    </Grid>
+    </li>
   )
 }
