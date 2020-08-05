@@ -4,6 +4,7 @@ import {graphql} from 'gatsby'
 import {Box, Grid, jsx} from 'theme-ui'
 import {Image} from './Image'
 import {Title} from './Title'
+import {Date} from './Date'
 import {getPostPath} from '../helpers'
 import {VideoThumbnail} from './VideoThumbnail'
 
@@ -11,7 +12,6 @@ export const PostCard = ({
   title,
   slug: {current: slug},
   publishedAt,
-  _rawBody,
   previewImages,
   videos,
 }) => {
@@ -37,22 +37,23 @@ export const PostCard = ({
   const video = videos && videos[0]
   return (
     <li>
-      <Grid gap={0} columns={[1]} sx={{}}>
+      <Grid gap={0} columns={[1]} sx={{bg: 'green', minHeight: '350px'}}>
         <Grid>
           {image ? (
             <Image image={image} link={postPath} />
           ) : (
-            video && <VideoThumbnail video={video} />
+            video && <VideoThumbnail video={video} link={postPath} />
           )}
         </Grid>
         <Box
-          p={4}
+          p={3}
           sx={{
             display: 'grid',
             gap: 0,
             alignItems: 'center',
           }}
         >
+          <Date date={publishedAt} />
           <Title title={title} link={postPath} />
         </Box>
       </Grid>

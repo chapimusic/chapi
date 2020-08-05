@@ -20,7 +20,7 @@ export const VideoThumbnail = ({video, link}) => {
         <img
           src={`http://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
           sx={{
-            width: '256px',
+            width: '100%',
           }}
         />
       )
