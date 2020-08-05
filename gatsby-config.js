@@ -60,7 +60,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-preact`,
     {
-      resolve: 'gatsby-plugin-zopfli',
+      resolve: 'gatsby-plugin-brotli',
       options: {
         extensions: ['css', 'html', 'js', 'svg'],
       },
