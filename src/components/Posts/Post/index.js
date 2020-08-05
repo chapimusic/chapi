@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import {Box, Grid, jsx} from 'theme-ui'
 import {Body} from './Body'
 import {Images} from './Images'
+import {Videos} from './Videos'
 import {Title} from './Title'
 import {Date} from './Date'
 import {getPostPath} from '../helpers'
@@ -11,6 +12,7 @@ export const Post = ({
   title,
   slug: {current: slug},
   images,
+  videos,
   _rawBody,
   publishedAt,
 }) => {
@@ -18,6 +20,7 @@ export const Post = ({
     fragment postFields on SanityPost {
       ...postCardFields
       ...postImageFields
+      ...postVideoFields
     }
   `
   const postPath = getPostPath({publishedAt, slug})
@@ -27,6 +30,7 @@ export const Post = ({
       <Grid gap={2} columns={[1, 1, 2]}>
         <Box sx={{order: 0}}>
           <Images images={images} />
+          <Videos videos={videos} />
         </Box>
         <Box
           sx={{
@@ -37,9 +41,9 @@ export const Post = ({
             gridColumnEnd: ['auto', 4, 'auto'],
           }}
         >
+          <Date date={publishedAt} />
           <Title title={title} link={postPath} />
           <Body raw={_rawBody} />
-          <Date date={publishedAt} />
         </Box>
       </Grid>
     </article>

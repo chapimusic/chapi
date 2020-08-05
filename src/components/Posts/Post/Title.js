@@ -6,8 +6,8 @@ import {jsx} from 'theme-ui'
 export const Title = ({title, link}) => {
   return (
     <Fragment>
-      <Link to={link}>
-        <h2 sx={{fontSize: [5, 6, 5, 6]}}>{title}</h2>
+      <Link to={link} sx={{color: 'text', textDecoration: 'none'}}>
+        <h2 sx={{fontSize: 5}}>{title}</h2>
       </Link>
     </Fragment>
   )

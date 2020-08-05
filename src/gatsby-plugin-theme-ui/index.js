@@ -1,4 +1,5 @@
 import {tailwind} from '@theme-ui/presets'
+import './reset.css'
 import './custom.css'
 
 export default {
@@ -71,6 +72,18 @@ export default {
       'a,button': {
         ':focus': {outline: 0},
       },
+      a: {
+        color: 'primary',
+        textDecoration: 'none',
+        borderBottom: '1px solid',
+        borderColor: 'primary',
+      },
+      form: {
+        margin: 0,
+      },
+    },
+    handwrite: {
+      fontFamily: "'Satisfy', cursive",
     },
   },
   layout: {
