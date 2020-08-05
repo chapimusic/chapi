@@ -1,5 +1,6 @@
 import {tailwind} from '@theme-ui/presets'
 import './custom.css'
+import './reset.css'
 
 export default {
   ...tailwind,
@@ -20,6 +21,7 @@ export default {
     purple: '#814490',
     orange: '#ed7c20',
     gray: '#444',
+    muted: '#ccc',
   },
   fonts: {
     ...tailwind.fonts,
@@ -53,6 +55,9 @@ export default {
       mt: 0,
       pt: 2,
     },
+    raleway: {
+      fontFamily: '"Raleway", sans-serif',
+    },
     h2: {
       textTransform: 'uppercase',
       fontFamily: '"Raleway", sans-serif',
@@ -70,6 +75,18 @@ export default {
       bg: 'white',
       'a,button': {
         ':focus': {outline: 0},
+      },
+      a: {
+        color: 'primary',
+      },
+      form: {
+        margin: 0,
+      },
+      p: {
+        my: 2,
+      },
+      strong: {
+        fontWeight: 'bold',
       },
     },
   },
@@ -110,7 +127,7 @@ export default {
         },
       },
       mobile: {
-        bg: 'green',
+        bg: 'red.0',
         position: 'fixed',
         height: '100%',
         display: ['block', 'block', 'block', 'none'],

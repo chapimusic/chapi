@@ -1,15 +1,20 @@
 /** @jsx jsx */
+// import {motion} from 'framer-motion'
 import {graphql} from 'gatsby'
 import {Box, Grid, jsx} from 'theme-ui'
 import {Image} from './Image'
 import {Title} from './Title'
+import {Date} from './Date'
 import {getPostPath} from '../helpers'
+import {VideoThumbnail} from './VideoThumbnail'
 
 export const PostCard = ({
   title,
   slug: {current: slug},
   publishedAt,
   previewImages,
+  videos,
+  ...props
 }) => {
   graphql`
     fragment postCardFields on SanityPost {
@@ -24,27 +29,34 @@ export const PostCard = ({
           ...postCardImageFields
         }
       }
+      ...postVideoThumbnailFields
     }
   `
   const postPath = getPostPath({publishedAt, slug})
   const image = previewImages && previewImages[0]
+  const video = videos && videos[0]
   return (
-    <Grid gap={0} columns={[1, 2]} sx={{}}>
-      <Grid sx={{order: [0, 1]}}>
-        <Image image={image} link={postPath} />
+    <li>
+      <Grid gap={0} columns={[1]} sx={{minHeight: '350px'}} {...props}>
+        <Grid>
+          {image ? (
+            <Image image={image} link={postPath} />
+          ) : (
+            video && <VideoThumbnail video={video} link={postPath} />
+          )}
+        </Grid>
+        <Box
+          p={3}
+          sx={{
+            display: 'grid',
+            gap: 0,
+            alignItems: 'center',
+          }}
+        >
+          <Date date={publishedAt} />
+          <Title title={title} link={postPath} />
+        </Box>
       </Grid>
-      <Box
-        p={4}
-        sx={{
-          display: 'grid',
-          order: [1, 0],
-          gap: 0,
-          minHeight: ['200px', '300px'],
-          alignItems: 'center',
-        }}
-      >
-        <Title title={title} link={postPath} />
-      </Box>
-    </Grid>
+    </li>
   )
 }

@@ -10,10 +10,11 @@ export const Title = ({title, link}) => {
         to={link}
         sx={{
           borderBottom: '1px solid transparent',
-          ':hover': {textDecoration: 'none', borderColor: 'rgba(0,0,0,0.08)'},
+          textDecoration: 'none',
+          ':hover': {borderColor: 'rgba(0,0,0,0.08)'},
         }}
       >
-        <h2 sx={{m: 0}}>{title}</h2>
+        <h2 sx={{m: 0, color: 'white'}}>{title}</h2>
       </Link>
     </Fragment>
   )

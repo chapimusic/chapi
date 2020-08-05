@@ -20,6 +20,7 @@ export const Image = ({image, link}) => {
         sx={{
           height: 'full',
           width: 'full',
+          maxHeight: '200px',
         }}
       />
     )

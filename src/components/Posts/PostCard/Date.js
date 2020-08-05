@@ -6,12 +6,11 @@ import {jsx} from 'theme-ui'
 export const Date = ({date}) => (
   <div
     sx={{
-      color: 'textMuted',
-      variant: `styles.raleway`,
+      color: '#000',
       textTransform: 'uppercase',
-      fontSize: [1, 3],
+      fontSize: 0,
     }}
   >
-    Le {format(parseISO(date), 'dd MMMMMM yyyy', {locale: fr})},
+    {format(parseISO(date), 'dd MMMMMM yyyy', {locale: fr})}
   </div>
 )

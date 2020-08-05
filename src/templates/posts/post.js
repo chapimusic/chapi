@@ -28,7 +28,7 @@ const PostPage = ({data, errors, ...props}) => {
       {post && <Post {...post} />}
       {newerPostsNodes && newerPostsNodes.length > 0 && (
         <Box p={[4, 4, 5]}>
-          <Styled.h3>Nouvelles plus récentes</Styled.h3>
+          <Styled.h3>Autres nouvelles</Styled.h3>
           <Posts nodes={newerPostsNodes} />
         </Box>
       )}

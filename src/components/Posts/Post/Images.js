@@ -17,13 +17,15 @@ export const Images = ({images}) => {
     }
   `
   return (
-    <div
+    <ul
       sx={{
+        listStyle: 'none',
         width: '100%',
         position: 'relative',
-        display: 'flex',
+        display: 'grid',
+        gridGap: 3,
+        gridTemplateColumns: 'repeat(auto-fit, minmax(256px, 512px))',
         justifyContent: 'center',
-        alignItems: 'center',
       }}
     >
       {images &&
@@ -34,26 +36,28 @@ export const Images = ({images}) => {
             image.asset &&
             image.asset.fluid &&
             image.asset.fluid.src && (
-              <figure
+              <li
                 sx={{
                   height: 'full',
                   width: 'full',
                 }}
               >
-                <Img
-                  key={image.asset.fluid.src}
-                  fluid={image.asset.fluid}
-                  title={image.caption}
-                  alt={image.caption}
-                  sx={{
-                    height: 'full',
-                    width: 'full',
-                  }}
-                />
-                <figcaption>{image.caption}</figcaption>
-              </figure>
+                <figure>
+                  <Img
+                    key={image.asset.fluid.src}
+                    fluid={image.asset.fluid}
+                    title={image.caption}
+                    alt={image.caption}
+                    sx={{
+                      height: 'full',
+                      width: 'full',
+                    }}
+                  />
+                  <figcaption>{image.caption}</figcaption>
+                </figure>
+              </li>
             )
         )}
-    </div>
+    </ul>
   )
 }
