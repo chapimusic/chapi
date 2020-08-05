@@ -1,6 +1,6 @@
 import {tailwind} from '@theme-ui/presets'
-import './reset.css'
 import './custom.css'
+import './reset.css'
 
 export default {
   ...tailwind,
@@ -81,6 +81,12 @@ export default {
       },
       form: {
         margin: 0,
+      },
+      p: {
+        my: 2,
+      },
+      strong: {
+        fontWeight: 'bold',
       },
     },
   },
