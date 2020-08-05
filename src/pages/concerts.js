@@ -36,7 +36,7 @@ const ConcertsPage = () => {
             <Styled.h2>Concerts à venir</Styled.h2>{' '}
             <BlockContent blocks={_rawUpcomingConcerts} />
           </Box>
-          <Box sx={{pt: 3}}>
+          <Box sx={{p: 3}}>
             <Styled.h2>Concerts passés</Styled.h2>
             <BlockContent blocks={_rawPastConcerts} />
           </Box>
