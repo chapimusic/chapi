@@ -45,7 +45,7 @@ export const Images = ({images}) => {
                 width: 'full',
               }}
             />
-            <figcaption>{image.caption}</figcaption>
+            <figcaption sx={{color: 'muted', p: 2}}>{image.caption}</figcaption>
           </figure>
         ))}
     </div>

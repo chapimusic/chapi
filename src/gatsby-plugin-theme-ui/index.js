@@ -21,6 +21,7 @@ export default {
     purple: '#814490',
     orange: '#ed7c20',
     gray: '#444',
+    muted: '#ccc',
   },
   fonts: {
     ...tailwind.fonts,
