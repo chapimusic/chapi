@@ -28,26 +28,32 @@ export const Images = ({images}) => {
     >
       {images &&
         images.length > 0 &&
-        images.map(image => (
-          <figure
-            sx={{
-              height: 'full',
-              width: 'full',
-            }}
-          >
-            <Img
-              key={image.asset.fluid.src}
-              fluid={image.asset.fluid}
-              title={image.caption}
-              alt={image.caption}
-              sx={{
-                height: 'full',
-                width: 'full',
-              }}
-            />
-            <figcaption>{image.caption}</figcaption>
-          </figure>
-        ))}
+        images.map(
+          image =>
+            image &&
+            image.asset &&
+            image.asset.fluid &&
+            image.asset.fluid.src && (
+              <figure
+                sx={{
+                  height: 'full',
+                  width: 'full',
+                }}
+              >
+                <Img
+                  key={image.asset.fluid.src}
+                  fluid={image.asset.fluid}
+                  title={image.caption}
+                  alt={image.caption}
+                  sx={{
+                    height: 'full',
+                    width: 'full',
+                  }}
+                />
+                <figcaption>{image.caption}</figcaption>
+              </figure>
+            )
+        )}
     </div>
   )
 }
