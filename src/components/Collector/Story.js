@@ -30,9 +30,7 @@ export const Story = props => {
           multicolore que prend vie <strong>Collector</strong>, un joyeux ovni
           qui navigue entre minimal pop, électro pop et punky pop."
         </p>
-        <Styled.h4 sx={{my: 2}}>
-          73 jouets musicaux vintage à l'intérieur !
-        </Styled.h4>
+        <Styled.h4>73 jouets musicaux vintage à l'intérieur !</Styled.h4>
         <p>
           Avec la participation de MAXWELL FARRINGTON (Dewaere), LAETITIA
           SHERIFF, JAD FAIR (Half Japanese), RACHEL BARREDA HORWOOD (Trash Kit,

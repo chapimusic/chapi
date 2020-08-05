@@ -1,4 +1,5 @@
 /** @jsx jsx */
+// import {motion} from 'framer-motion'
 import {graphql} from 'gatsby'
 import {Box, Grid, jsx} from 'theme-ui'
 import {Image} from './Image'
