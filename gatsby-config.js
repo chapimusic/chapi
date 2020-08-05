@@ -69,5 +69,20 @@ module.exports = {
         extensions: ['css', 'html', 'js', 'svg'],
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://chapimusic.com',
+        sitemap: 'https://chapimusic.com/sitemap.xml',
+        env: {
+          development: {
+            policy: [{userAgent: '*', disallow: ['/']}],
+          },
+          production: {
+            policy: [{userAgent: '*', allow: '/'}],
+          },
+        },
+      },
+    },
   ],
 }
