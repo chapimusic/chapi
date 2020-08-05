@@ -88,28 +88,26 @@ async function createReleasePages(graphql, actions, reporter) {
   `)
   if (result.errors) throw result.errors
   const edges = (result.data.query || {}).edges || []
-  edges
-    //.filter(edge => !isFuture(parseISO(edge.node.publishedAt)))
-    .forEach(edge => {
-      const {
-        node: {
-          id: release,
-          slug: {current: slug},
-          publishedAt,
-        },
-      } = edge
-      const path = `/album/${slug}/`
-      reporter.info(`Creating project page: ${path}`)
-      createPage({
-        path,
-        component: pth.resolve(
-          pth.join(templates.baseDir, templates.releases.release)
-        ),
-        context: {
-          release,
-        },
-      })
+  edges.forEach(edge => {
+    const {
+      node: {
+        id: release,
+        slug: {current: slug},
+        publishedAt,
+      },
+    } = edge
+    const path = `/album/${slug}/`
+    reporter.info(`Creating project page: ${path}`)
+    createPage({
+      path,
+      component: pth.resolve(
+        pth.join(templates.baseDir, templates.releases.release)
+      ),
+      context: {
+        release,
+      },
     })
+  })
 }
 
 /*
