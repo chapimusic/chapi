@@ -1333,6 +1333,13 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@gfx/zopfli@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@gfx/zopfli/-/zopfli-1.0.15.tgz#00720b4f6a4d5ceeb585a5d6dd672b48bd4fc755"
+  integrity sha512-7mBgpi7UD82fsff5ThQKet0uBTl4BYerQuc+/qA1ELTwWEiIedRTcD3JgiUu9wwZ2kytW8JOb165rSdAt8PfcQ==
+  dependencies:
+    base64-js "^1.3.0"
+
 "@graphql-tools/schema@^6.0.14":
   version "6.0.16"
   resolved "https://registry.yarnpkg.com/@graphql-tools/schema/-/schema-6.0.16.tgz#778e6eefbc48052538d1f8976b1ecf50e2330e1b"
@@ -1797,6 +1804,24 @@
     lodash.debounce "^4.0.8"
     native-url "^0.2.6"
     schema-utils "^2.6.5"
+
+"@prefresh/core@^0.7.2":
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/@prefresh/core/-/core-0.7.4.tgz#aa61b0049c5d7e78b29db553a465cd7df036aac3"
+  integrity sha512-Qbdjg0xH7svik4ErxMLcJUblEoi1qKt/Je3qsHqLdZjtsU4/BWW6oOtz4COAZK5KirpFS56VjBYMLzi6/ueZqQ==
+
+"@prefresh/utils@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@prefresh/utils/-/utils-0.2.1.tgz#1446082c87f1ef61b0c407f1bd0e79726fb5ab45"
+  integrity sha512-Ju7WHncqUKsaFp7yAFoNSR2jdr0bjqr8AwV06LtpFmwliPe4IDGRcBGhofg+SY9yld3FUF1JWmEoUOfCyCGRhA==
+
+"@prefresh/webpack@^0.8.1":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@prefresh/webpack/-/webpack-0.8.2.tgz#e789437189aaded81eaa083455078b39c5f1922a"
+  integrity sha512-c4YsahgvnaOsSu9IW12yixiYfEKbC+DjqVPSezAhN0B5wXtoaTelEY5vmPSY3bFjcFiqnWXA1NJ49WbQ5ozAcw==
+  dependencies:
+    "@prefresh/core" "^0.7.2"
+    "@prefresh/utils" "^0.2.1"
 
 "@reach/alert@0.10.3":
   version "0.10.3"
@@ -3460,7 +3485,7 @@ base64-arraybuffer@0.1.5:
   resolved "https://registry.yarnpkg.com/base64-arraybuffer/-/base64-arraybuffer-0.1.5.tgz#73926771923b5a19747ad666aa5cd4bf9c6e9ce8"
   integrity sha1-c5JncZI7Whl0etZmqlzUv5xunOg=
 
-base64-js@^1.0.2:
+base64-js@^1.0.2, base64-js@^1.2.0, base64-js@^1.3.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.1.tgz#58ece8cb75dd07e71ed08c736abc5fac4dbf8df1"
   integrity sha512-mLQ4i2QO1ytvGWFWmcngKO//JXAQueZvwEKtjgQFM4jIK0kU+ytMfplL8j+n5mspOfjHwoAg+9yhb7BwAHm36g==
@@ -6123,6 +6148,11 @@ event-source-polyfill@^1.0.15:
   resolved "https://registry.yarnpkg.com/event-source-polyfill/-/event-source-polyfill-1.0.15.tgz#a28e116281be677af4b055b67d95517e35c92435"
   integrity sha512-IVmd8jWwX6ag5rXIdVCPBjBChiHBceLb1/7aKPIK7CUeJ5Br7alx029+ZpQlK4jW4Hk2qncy3ClJP97S8ltvmg==
 
+eventemitter-asyncresource@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/eventemitter-asyncresource/-/eventemitter-asyncresource-1.0.0.tgz#734ff2e44bf448e627f7748f905d6bdd57bdb65b"
+  integrity sha512-39F7TBIV0G7gTelxwbEqnwhp90eqCPON1k0NwNfwhgKn4Co4ybUbj2pECcXT0B3ztRKZ7Pw1JujUUgmQJHcVAQ==
+
 eventemitter3@^3.1.0:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
@@ -7042,6 +7072,14 @@ gatsby-plugin-page-creator@^2.3.19:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-preact@^4.0.9:
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-preact/-/gatsby-plugin-preact-4.0.9.tgz#57f91036b9136efb2dc2e86ab7125a48561b2b4a"
+  integrity sha512-4OT75UHqIU/aNJuqFgqVSuwz4y7wi29lKF2PcGpszNgwFmdX2/Y0eK8P386FXrREmg3dgymeokMu1xlIbY+BXA==
+  dependencies:
+    "@prefresh/webpack" "^0.8.1"
+    react-refresh "^0.8.2"
+
 gatsby-plugin-react-helmet@^3.3.10:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.3.10.tgz#ba2f84715cc2471606b90327c7c3ba11c5287bc7"
@@ -7097,6 +7135,16 @@ gatsby-plugin-typescript@^2.4.16:
     "@babel/preset-typescript" "^7.10.1"
     "@babel/runtime" "^7.10.3"
     babel-plugin-remove-graphql-queries "^2.9.15"
+
+gatsby-plugin-zopfli@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-zopfli/-/gatsby-plugin-zopfli-2.0.0.tgz#4af278d2ce63486a4d73c6533259d5487003e0d9"
+  integrity sha512-7ybA0ub5yUbXtp4J7hVCwFj0yfKj0Yh8ziA+t5P9kPHAWfG9Vcd2L3EhhN0PLRzARISwK5W3wIfz/tNRlotHZQ==
+  dependencies:
+    "@gfx/zopfli" "^1.0.15"
+    glob "^7.1.6"
+    mkdirp "^1.0.4"
+    piscina "^1.6.3"
 
 gatsby-react-router-scroll@^3.0.12:
   version "3.0.12"
@@ -8053,6 +8101,21 @@ hastscript@^5.0.0:
     hast-util-parse-selector "^2.0.0"
     property-information "^5.0.0"
     space-separated-tokens "^1.0.0"
+
+hdr-histogram-js@^1.0.0, hdr-histogram-js@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/hdr-histogram-js/-/hdr-histogram-js-1.2.0.tgz#1213c0b317f39b9c05bc4f208cb7931dbbc192ae"
+  integrity sha512-h0YToJ3ewqsaZ3nFTTa6dLOD7sqx+EgdC4+OcJ9Ou7zZDlT0sXSPHHr3cyenQsPqqbVHGn/oFY6zjfEKXGvzmQ==
+  dependencies:
+    base64-js "^1.2.0"
+    pako "^1.0.3"
+
+hdr-histogram-percentiles-obj@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/hdr-histogram-percentiles-obj/-/hdr-histogram-percentiles-obj-2.0.1.tgz#7a4d52fa02087118c66469e6b66b74f9fbb44d82"
+  integrity sha512-QBvbTxPlGwHj36IRF16XLoYEbUv5YEyO385kiS0IS3831fcSTNXTR785VtFFZ2ahY733z0ky8Jv4d6In+Ss+wQ==
+  dependencies:
+    hdr-histogram-js "^1.0.0"
 
 hex-color-regex@^1.1.0:
   version "1.1.0"
@@ -10254,6 +10317,14 @@ next-tick@^1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.1.0.tgz#1836ee30ad56d67ef281b22bd199f709449b35eb"
   integrity sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==
 
+nice-napi@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"
+  integrity sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==
+  dependencies:
+    node-addon-api "^3.0.0"
+    node-gyp-build "^4.2.2"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
@@ -10313,6 +10384,11 @@ node-forge@0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.9.0.tgz#d624050edbb44874adca12bb9a52ec63cb782579"
   integrity sha512-7ASaDa3pD+lJ3WvXFsxekJQelBKRpne+GOVbLbtHYdd7pFspyeuJHnWfLplGf3SwKGbfs/aYl5V/JCIaHVUKKQ==
+
+node-gyp-build@^4.2.2:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.2.3.tgz#ce6277f853835f718829efb47db20f3e4d9c4739"
+  integrity sha512-MN6ZpzmfNCRM+3t57PTJHgHyw/h4OWnZ6mR8P5j/uZtqQr46RRuDE/P+g3n0YR/AiYXeWixZZzaip77gdICfRg==
 
 node-libs-browser@^2.2.1:
   version "2.2.1"
@@ -10889,7 +10965,7 @@ package-json@^6.3.0:
     registry-url "^5.0.0"
     semver "^6.2.0"
 
-pako@^1.0.5, pako@~1.0.5:
+pako@^1.0.3, pako@^1.0.5, pako@~1.0.5:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
@@ -11224,6 +11300,17 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
+
+piscina@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/piscina/-/piscina-1.6.3.tgz#1adfc09a835108561a8cdc7acfd2ab3119141155"
+  integrity sha512-I8aoBroMD6cRGYFsW1oN3X5YfJAyuT4pn+P2Tnk8ZYQ134ZqaQ0mjUztm9+NmKKawd0XlTY8wvz6bMxckrJX6g==
+  dependencies:
+    eventemitter-asyncresource "^1.0.0"
+    hdr-histogram-js "^1.2.0"
+    hdr-histogram-percentiles-obj "^2.0.1"
+  optionalDependencies:
+    nice-napi "^1.0.2"
 
 pixelmatch@^4.0.2:
   version "4.0.2"
@@ -11652,6 +11739,18 @@ potrace@^2.1.8:
   dependencies:
     jimp "^0.14.0"
 
+preact-render-to-string@^5.1.10:
+  version "5.1.10"
+  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-5.1.10.tgz#cce03d73b166c550148af9dedc9e06fdf6820f8a"
+  integrity sha512-40svy7NDe5Qe0ymdsIC11f0hZb05MeTSUqqIaWJ5DEFCh/sF86KcpRW0kN/ymGYDVVUCfv9qFrVuLCXR7aQxgQ==
+  dependencies:
+    pretty-format "^3.8.0"
+
+preact@^10.4.6:
+  version "10.4.6"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.4.6.tgz#86cc43396e4bdd755726a2b4b1f0529e78067cd3"
+  integrity sha512-80WJfXH53yyINig5Wza/8MD9n4lMg9G6aN00ws0ptsAaY/Fu/M7xW4zICf7OLfocVltxS30wvNQ8oIbUyZS1tw==
+
 prebuild-install@^5.3.4:
   version "5.3.5"
   resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-5.3.5.tgz#e7e71e425298785ea9d22d4f958dbaccf8bb0e1b"
@@ -11715,6 +11814,11 @@ pretty-format@^25.5.0:
     ansi-regex "^5.0.0"
     ansi-styles "^4.0.0"
     react-is "^16.12.0"
+
+pretty-format@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-3.8.0.tgz#bfbed56d5e9a776645f4b1ff7aa1a3ac4fa3c385"
+  integrity sha1-v77VbV6ad2ZF9LH/eqGjrE+jw4U=
 
 private@^0.1.8:
   version "0.1.8"
@@ -12178,6 +12282,11 @@ react-refresh@^0.7.0:
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.7.2.tgz#f30978d21eb8cac6e2f2fde056a7d04f6844dd50"
   integrity sha512-u5l7fhAJXecWUJzVxzMRU2Zvw8m4QmDNHlTrT5uo3KBlYBhmChd7syAakBoay1yIiVhx/8Fi7a6v6kQZfsw81Q==
+
+react-refresh@^0.8.2:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
+  integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
 react-remove-scroll-bar@^2.1.0:
   version "2.1.0"

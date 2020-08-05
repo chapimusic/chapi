@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {Grid, jsx} from 'theme-ui'
+import {jsx} from 'theme-ui'
 import {PostCard} from './PostCard'
 
 export const Posts = ({title, nodes, ...props}) => (

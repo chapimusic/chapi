@@ -5,6 +5,7 @@ import {Box, Grid, jsx} from 'theme-ui'
 import {Image} from './Image'
 import {Title} from './Title'
 import {getPostPath} from '../helpers'
+import {VideoThumbnail} from './VideoThumbnail'
 
 export const PostCard = ({
   title,
@@ -12,6 +13,7 @@ export const PostCard = ({
   publishedAt,
   _rawBody,
   previewImages,
+  videos,
 }) => {
   graphql`
     fragment postCardFields on SanityPost {
@@ -27,14 +29,22 @@ export const PostCard = ({
           ...postCardImageFields
         }
       }
+      ...postVideoThumbnailFields
     }
   `
   const postPath = getPostPath({publishedAt, slug})
   const image = previewImages && previewImages[0]
+  const video = videos && videos[0]
   return (
     <li>
       <Grid gap={0} columns={[1]} sx={{}}>
-        <Grid>{image && <Image image={image} link={postPath} />}</Grid>
+        <Grid>
+          {image ? (
+            <Image image={image} link={postPath} />
+          ) : (
+            video && <VideoThumbnail video={video} />
+          )}
+        </Grid>
         <Box
           p={4}
           sx={{
