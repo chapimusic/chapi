@@ -16,7 +16,7 @@ export const Contact = props => {
     }
   `)
   return (
-    <Grid gap={4} columns={[1]} sx={{maxWidth: '520px', mx: 'auto'}} {...props}>
+    <Grid gap={4} columns={[1]} sx={{maxWidth: '400px', mx: 'auto'}} {...props}>
       <Box sx={{textAlign: 'center'}}>
         <Img
           fluid={data.jouetSynth.childImageSharp.fluid}
@@ -25,7 +25,9 @@ export const Contact = props => {
       </Box>
       <Box sx={{textAlign: ['left', 'center']}}>
         <Styled.h1>Contact</Styled.h1>
-        <p>contact@chapimusic.com</p>
+        <p sx={{fontSize: 3}}>
+          <a href={`mailto:contact@chapimusic.com`}>contact@chapimusic.com</a>
+        </p>
       </Box>
     </Grid>
   )
