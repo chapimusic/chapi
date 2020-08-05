@@ -74,9 +74,6 @@ export default {
       },
       a: {
         color: 'primary',
-        textDecoration: 'none',
-        borderBottom: '1px solid',
-        borderColor: 'primary',
       },
       form: {
         margin: 0,
