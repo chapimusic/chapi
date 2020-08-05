@@ -34,7 +34,7 @@ export const PostCard = ({
   return (
     <Grid gap={0} columns={[1, 2]} sx={{}}>
       <Grid sx={{order: [0, 1]}}>
-        <Image image={image} link={postPath} />
+        {image && <Image image={image} link={postPath} />}
       </Grid>
       <Box
         p={4}
