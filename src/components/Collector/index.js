@@ -27,7 +27,8 @@ export const Collector = () => {
     <Grid gap={2} columns={[1]} sx={{maxWidth: '960px', mx: 'auto'}}>
       <Box sx={{textAlign: 'center'}}>
         <Styled.h1>Collector</Styled.h1>
-        <Styled.h2>Le nouvel album de Chapi Chapo</Styled.h2>
+        <Styled.h2>Nouvel album</Styled.h2>
+        <Styled.h2>Chapi Chapo &amp; les jouets électroniques</Styled.h2>
         <Img
           fluid={data.collectorLP.childImageSharp.fluid}
           sx={{maxWidth: ['80vw', '70vw', '65vw', '55vw', '40vw'], mx: 'auto'}}

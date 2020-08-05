@@ -24,11 +24,11 @@ export const Story = props => {
     >
       <Box sx={{zIndex: 2}}>
         <p>
-          De brocantes en vide-greniers, le musicien finistérien amasse par
+          "De brocantes en vide-greniers, le musicien finistérien amasse par
           centaines des jouets musicaux anciens du monde entier. Son 4ème album
           s'articule autour des jouets électroniques. C'est dans une marmite
           multicolore que prend vie <strong>Collector</strong>, un joyeux ovni
-          qui navigue entre minimal pop, électro pop et punky pop.
+          qui navigue entre minimal pop, électro pop et punky pop."
         </p>
         <Styled.h4>73 jouets musicaux vintage à l'intérieur !</Styled.h4>
         <p>
