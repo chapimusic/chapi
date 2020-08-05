@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import {Grid, Box, Styled, jsx} from 'theme-ui'
 import {graphql, useStaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
+import {Box, Grid, jsx} from 'theme-ui'
 
 export const Contact = props => {
   const data = useStaticQuery(graphql`

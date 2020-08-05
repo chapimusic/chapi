@@ -1,3 +1,9 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
   siteMetadata: {
     title: `Chapi Chapo`,
@@ -32,11 +38,9 @@ module.exports = {
       options: {
         projectId: '510i3x4t',
         dataset: 'production',
-        // To enable preview of drafts, copy .env-example into .env,
-        // and add a token with read permissions
-        //token: process.env.SANITY_TOKEN,
-        watchMode: true,
-        overlayDrafts: true,
+        overlayDrafts: !isProd,
+        watchMode: !isProd,
+        token: process.env.SANITY_TOKEN,
       },
     },
     `gatsby-plugin-theme-ui`,

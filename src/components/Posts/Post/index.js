@@ -18,6 +18,7 @@ export const Post = ({
     fragment postFields on SanityPost {
       ...postCardFields
       ...postImageFields
+      _rawBody
     }
   `
   const postPath = getPostPath({publishedAt, slug})

@@ -9,7 +9,6 @@ export const PostCard = ({
   title,
   slug: {current: slug},
   publishedAt,
-  _rawBody,
   previewImages,
 }) => {
   graphql`
@@ -20,7 +19,6 @@ export const PostCard = ({
         current
       }
       publishedAt
-      _rawBody
       previewImages: images {
         asset {
           ...postCardImageFields
