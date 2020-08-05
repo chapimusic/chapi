@@ -2,12 +2,10 @@
 import {Box, jsx} from 'theme-ui'
 import {Collector, Vinyle, Story} from '../components/Collector'
 import {Layout} from '../components/Layout'
-import SEO from '../components/SEO'
 
 const IndexPage = () => (
   <Layout>
     <Box sx={{bg: 'red.0', color: 'white', p: 4}}>
-      <SEO title="COLLECTOR, nouvel album" />
       <Collector />
     </Box>
     <Box
