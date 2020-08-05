@@ -11,15 +11,18 @@ export const Image = ({image, link}) => {
       }
     }
   `
-  const Image = () => (
-    <Img
-      fluid={image.asset.fluid}
-      sx={{
-        height: 'full',
-        width: 'full',
-      }}
-    />
-  )
+  const Image = () =>
+    image &&
+    image.asset &&
+    image.asset.fluid && (
+      <Img
+        fluid={image.asset.fluid}
+        sx={{
+          height: 'full',
+          width: 'full',
+        }}
+      />
+    )
   return link ? (
     <Link to={link}>
       <Image />
