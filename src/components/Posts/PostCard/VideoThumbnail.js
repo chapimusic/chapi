@@ -17,7 +17,7 @@ export const VideoThumbnail = ({video, link}) => {
     return (
       videoId && (
         <img
-          src={`http://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
+          src={`https://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
           sx={{
             width: '100%',
           }}

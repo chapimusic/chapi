@@ -6,7 +6,15 @@ import SEO from '../components/SEO'
 
 const ContactPage = () => (
   <Layout>
-    <Box sx={{p: 4}}>
+    <Box
+      sx={{
+        p: [3, 4, 5],
+        position: 'relative',
+        background: 'url(/arc-horizontal.svg)',
+        height: '100%',
+        minHeight: '600px',
+      }}
+    >
       <SEO title="Contact" />
       <Contact />
     </Box>

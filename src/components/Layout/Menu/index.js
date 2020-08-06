@@ -1,9 +1,10 @@
 export const links = [
   {url: '/', text: 'Collector'},
   //{url: '/nouvelles/', text: 'Nouvelles'},
-  //{url: '/musique/', text: 'Musique'},
   //{url: '/boutique/', text: 'Boutique'},
   {url: '/concerts/', text: 'Concerts'},
+  {url: '/spectacles/', text: 'Spectacles'},
+  {url: '/installations/', text: 'Installations'},
   {url: '/contact/', text: 'Contact'},
 ]
 

@@ -2,7 +2,7 @@
 import {graphql} from 'gatsby'
 import {Box, jsx} from 'theme-ui'
 import {Images} from './Images'
-import {getProductPath} from '../helpers'
+//import {getProductPath} from '../helpers'
 
 export const Product = ({
   title,
@@ -19,7 +19,7 @@ export const Product = ({
     }
   `
 
-  const productPath = getProductPath({slug})
+  //const productPath = getProductPath({slug})
 
   return (
     <article>
