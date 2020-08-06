@@ -1,5 +1,6 @@
+/** @jsx jsx */
 import {graphql} from 'gatsby'
-import React from 'react'
+import {Styled, jsx} from 'theme-ui'
 import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'
 import {Main} from '../components/Layout/Main'
@@ -29,6 +30,12 @@ const SpectaclesPage = ({data, errors}) => {
           height: '100%',
         }}
       >
+        <Styled.h1 sx={{textAlign: 'center'}}>
+          <span sx={{fontSize: 4, bg: 'white', p: 3}}>
+            Spectacles pour petits et grands
+          </span>
+        </Styled.h1>
+
         {spectaclesNodes && <Spectacles nodes={spectaclesNodes} />}
       </Main>
     </Layout>
