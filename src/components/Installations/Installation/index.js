@@ -3,14 +3,14 @@ import {graphql} from 'gatsby'
 import {Box, Grid, jsx} from 'theme-ui'
 import {Title} from './Title'
 import {Body} from './Body'
-import {Video} from './Video'
+import {Images} from './Images'
 
-export const Spectacle = ({title, vimeoVideo, _rawBody, link, ...props}) => {
+export const Installation = ({title, images, _rawBody, link, ...props}) => {
   graphql`
-    fragment spectacleFields on SanitySpectacle {
+    fragment installationFields on SanityInstallation {
       id
       title
-      ...spectacleVideoFields
+      ...installationImageFields
       _rawBody
       link
     }
@@ -34,7 +34,7 @@ export const Spectacle = ({title, vimeoVideo, _rawBody, link, ...props}) => {
           )}
         </Box>
         <Box>
-          <Video vimeoVideo={vimeoVideo} />
+          <Images images={images} />
         </Box>
       </Grid>
     </li>
