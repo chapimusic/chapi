@@ -23,11 +23,11 @@ export const Contact = props => {
           sx={{maxWidth: '100%'}}
         />
       </Box>
-      <Box sx={{textAlign: ['left', 'center']}}>
-        <Styled.h1>
+      <Box sx={{textAlign: ['left', 'center'], bg: 'white', p: 3}}>
+        <Styled.h1 css={{marginBlockStart: 0, marginBlockEnd: 0}}>
           <span sx={{fontSize: 4}}>Contact</span>
         </Styled.h1>
-        <p sx={{fontSize: 3}}>
+        <p sx={{fontSize: 3, pb: 5}}>
           <a href={`mailto:contact@chapimusic.com`}>contact@chapimusic.com</a>
         </p>
       </Box>
