@@ -17,7 +17,7 @@ export const Installation = ({title, images, _rawBody, link, ...props}) => {
   `
   return (
     <li>
-      <Grid gap={0} columns={[1, 1, 1, 2]} sx={{}} {...props}>
+      <Grid gap={0} columns={[1, 1, 1, 2]} sx={{maxWidth: '95vw'}} {...props}>
         <Box
           p={3}
           sx={{

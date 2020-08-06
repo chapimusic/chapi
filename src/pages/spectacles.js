@@ -31,7 +31,15 @@ const SpectaclesPage = ({data, errors}) => {
         }}
       >
         <Styled.h1 sx={{textAlign: 'center'}}>
-          <span sx={{fontSize: 4, bg: 'white', p: 3}}>
+          <span
+            sx={{
+              fontSize: 4,
+              mt: 2,
+              display: 'inline-block',
+              bg: 'white',
+              p: 3,
+            }}
+          >
             Spectacles pour petits et grands
           </span>
         </Styled.h1>

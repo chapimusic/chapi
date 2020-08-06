@@ -24,7 +24,7 @@ export const Images = ({images}) => {
         position: 'relative',
         display: 'grid',
         gridGap: 3,
-        gridTemplateColumns: 'repeat(auto-fit, minmax(256px, 512px))',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(100%, 100%))',
         justifyContent: 'center',
       }}
     >

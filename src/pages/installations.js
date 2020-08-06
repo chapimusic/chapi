@@ -31,7 +31,17 @@ const InstallationsPage = ({data, errors}) => {
         }}
       >
         <Styled.h1 sx={{textAlign: 'center'}}>
-          <span sx={{fontSize: 4, bg: 'white', p: 3}}>Installations</span>
+          <span
+            sx={{
+              fontSize: 4,
+              mt: 2,
+              display: 'inline-block',
+              bg: 'white',
+              p: 3,
+            }}
+          >
+            Installations
+          </span>
         </Styled.h1>
 
         {nodes && <Installations nodes={nodes} />}
