@@ -16,20 +16,40 @@ export const Contact = props => {
     }
   `)
   return (
-    <Grid gap={4} columns={[1]} sx={{maxWidth: '400px', mx: 'auto'}} {...props}>
-      <Box sx={{textAlign: 'center'}}>
+    <Grid gap={4} columns={[1]} sx={{maxWidth: '500px', mx: 'auto'}} {...props}>
+      <Box sx={{textAlign: 'center', position: 'relative'}}>
         <Img
           fluid={data.jouetSynth.childImageSharp.fluid}
           sx={{maxWidth: '100%'}}
         />
-      </Box>
-      <Box sx={{textAlign: ['left', 'center'], bg: 'white', p: 3}}>
-        <Styled.h1 css={{marginBlockStart: 0, marginBlockEnd: 0}}>
-          <span sx={{fontSize: 4}}>Contact</span>
-        </Styled.h1>
-        <p sx={{fontSize: 3, pb: 5}}>
-          <a href={`mailto:contact@chapimusic.com`}>contact@chapimusic.com</a>
-        </p>
+        <Box
+          sx={{
+            textAlign: 'center',
+            //bg: 'primary',
+            px: 3,
+            py: 2,
+            position: 'absolute',
+            top: '85%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+          }}
+        >
+          <p sx={{fontSize: 4}}>
+            <a
+              href={`mailto:contact@chapimusic.com`}
+              sx={{textDecoration: 'none'}}
+            >
+              <span
+                sx={{
+                  color: 'white',
+                  textTransform: 'uppercase',
+                }}
+              >
+                contact@chapimusic.com
+              </span>
+            </a>
+          </p>
+        </Box>
       </Box>
     </Grid>
   )

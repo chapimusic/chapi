@@ -6,7 +6,7 @@ import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'
 import SEO from '../components/SEO'
 
-const ConcertsPage = () => {
+const AgendaPage = () => {
   const {
     concerts: {_rawUpcomingConcerts, _rawPastConcerts},
     errors,
@@ -33,11 +33,11 @@ const ConcertsPage = () => {
       >
         <Box sx={{p: 4, maxWidth: '960px', mx: 'auto'}}>
           <Box sx={{bg: 'red.1', color: 'white', p: 3}}>
-            <Styled.h2>Concerts à venir</Styled.h2>{' '}
+            <Styled.h2>Dates à venir</Styled.h2>{' '}
             <BlockContent blocks={_rawUpcomingConcerts} />
           </Box>
           <Box sx={{p: 3}}>
-            <Styled.h2>Concerts passés</Styled.h2>
+            <Styled.h2>Dates passés</Styled.h2>
             <BlockContent blocks={_rawPastConcerts} />
           </Box>
         </Box>
@@ -46,4 +46,4 @@ const ConcertsPage = () => {
   )
 }
 
-export default ConcertsPage
+export default AgendaPage
