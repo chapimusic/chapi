@@ -45,7 +45,7 @@ export const Contact = props => {
                   textTransform: 'uppercase',
                 }}
               >
-                chapimusic@free.fr
+                contact@chapimusic.com
               </span>
             </a>
           </p>
