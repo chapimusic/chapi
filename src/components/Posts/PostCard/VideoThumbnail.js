@@ -33,11 +33,14 @@ export const VideoThumbnail = ({video, link}) => {
   const urlParsed = video && video.url && getVideoId(video.url)
   const videoId = urlParsed && urlParsed.id
 
-  const provider = video.url.includes('youtube')
-    ? 'youtube'
-    : video.url.includes('vimeo')
-    ? 'vimeo'
-    : false
+  const provider =
+    video &&
+    video.url &&
+    (video.url.includes('youtube')
+      ? 'youtube'
+      : video.url.includes('vimeo')
+      ? 'vimeo'
+      : false)
 
   const vimeoThumbnail = useVimeoThumbnail(videoId)
 
