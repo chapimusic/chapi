@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {Box, jsx} from 'theme-ui'
-import {Collector, Vinyle, Story} from '../components/Collector'
+import {Hero, Buy, Story} from '../components/Collector'
 import {Layout} from '../components/Layout'
 
 const IndexPage = () => (
@@ -13,7 +13,7 @@ const IndexPage = () => (
         p: 4,
       }}
     >
-      <Collector />
+      <Hero />
     </Box>
     <Box
       sx={{
@@ -39,7 +39,7 @@ const IndexPage = () => (
         />
       </Box>
       <Box sx={{background: 'transparent', color: 'text', p: 4}}>
-        <Vinyle
+        <Buy
           sx={{
             pl: ['22vw', 3],
           }}

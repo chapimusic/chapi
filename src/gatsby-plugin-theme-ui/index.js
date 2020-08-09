@@ -143,7 +143,7 @@ export default {
       },
     },
     footer: {
-      bg: 'pink',
+      bg: 'purple',
       color: 'white',
       a: {color: 'white'},
       p: 4,
