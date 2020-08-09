@@ -16,7 +16,7 @@ export const Collector = () => {
         relativePath: {eq: "ChapoChapo_Collector_LP_3Dsimu_A_Aplati.png"}
       ) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 100, maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }

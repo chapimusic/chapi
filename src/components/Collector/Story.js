@@ -8,7 +8,7 @@ export const Story = props => {
     query {
       speakAndSpell: file(relativePath: {eq: "jouet-boite.png"}) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 100, maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }

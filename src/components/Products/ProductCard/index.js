@@ -33,7 +33,7 @@ export const ProductCard = ({
   const productPath = getProductPath({slug})
   const image = previewImages && previewImages[0]
   return (
-    <Grid gap={0} columns={[1, 2]} sx={{}}>
+    <Grid gap={0} columns={[1]} sx={{}}>
       <Grid sx={{order: [0, 1]}}>
         <Image image={image} link={productPath} />
       </Grid>

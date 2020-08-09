@@ -7,6 +7,7 @@ export const useSiteMetadata = () => {
         site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
           title
           url
+          mail
           description
           keywords
           instagram

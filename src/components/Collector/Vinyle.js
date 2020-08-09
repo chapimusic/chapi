@@ -9,7 +9,7 @@ export const Vinyle = props => {
     query {
       speakAndSpell: file(relativePath: {eq: "jouet-speak-and-spell.png"}) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 100, maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
