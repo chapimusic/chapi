@@ -5,6 +5,7 @@ import {BlockContent} from '../components/BlockContent'
 import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'
 import SEO from '../components/SEO'
+import {useSiteMetadata} from '../lib/useSiteMetadata'
 
 const AgendaPage = () => {
   const {
@@ -31,13 +32,24 @@ const AgendaPage = () => {
           height: '100%',
         }}
       >
+        <Styled.h1 sx={{textAlign: 'center'}}>
+          <span
+            sx={{
+              fontSize: 4,
+              mt: 2,
+              display: 'inline-block',
+              bg: 'white',
+              p: 3,
+            }}
+          >
+            Agenda
+          </span>
+        </Styled.h1>
         <Box sx={{p: 4, maxWidth: '960px', mx: 'auto'}}>
           <Box sx={{bg: 'red.1', color: 'white', p: 3}}>
-            <Styled.h2>Dates à venir</Styled.h2>{' '}
             <BlockContent blocks={_rawUpcomingConcerts} />
           </Box>
           <Box sx={{p: 3}}>
-            <Styled.h2>Dates passés</Styled.h2>
             <BlockContent blocks={_rawPastConcerts} />
           </Box>
         </Box>

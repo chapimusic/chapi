@@ -64,12 +64,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-preact`,
     {
-      resolve: 'gatsby-plugin-brotli',
-      options: {
-        extensions: ['css', 'html', 'js', 'svg'],
-      },
-    },
-    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://chapimusic.com',
