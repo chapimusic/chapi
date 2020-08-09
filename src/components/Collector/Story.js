@@ -18,8 +18,8 @@ export const Story = props => {
   return (
     <Grid
       gap={2}
-      columns={[1, 'auto 300px']}
-      sx={{maxWidth: '1024px', mx: 'auto'}}
+      columns={[1, 'auto 200px', 'auto 300px']}
+      sx={{maxWidth: '1200px'}}
       {...props}
     >
       <Box sx={{zIndex: 2}}>
