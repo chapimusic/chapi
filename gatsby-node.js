@@ -199,7 +199,7 @@ async function createShopCategoryPages(graphql, actions, reporter) {
 */
 
 exports.createPages = async ({graphql, actions, reporter}) => {
-  //await createPostPages(graphql, actions, reporter)
+  await createPostPages(graphql, actions, reporter)
   //await createReleasePages(graphql, actions, reporter)
   //await createShopProductPages(graphql, actions, reporter)
   //  await createShopCategoryPages(graphql, actions, reporter)
