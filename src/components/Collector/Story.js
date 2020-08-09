@@ -8,7 +8,7 @@ export const Story = props => {
     query {
       speakAndSpell: file(relativePath: {eq: "jouet-boite.png"}) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 1200) {
+          fluid(quality: 100, maxWidth: 500) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -45,6 +45,7 @@ export const Story = props => {
         <p>
           <span sx={{color: 'gray'}}>Musique :</span> Patrice Elégoët |{' '}
           <span sx={{color: 'gray'}}>Mixage :</span>
+          {` `}
           Thomas Poli | <span sx={{color: 'gray'}}>Mastering :</span> Sébastien
           Lorho | <span sx={{color: 'gray'}}>Photos</span> : Jean-Philippe Corre
           | <span sx={{color: 'gray'}}>Graphisme</span> : Amélie Grosselin
@@ -53,7 +54,7 @@ export const Story = props => {
       <Box sx={{zIndex: 2}}>
         <Img
           fluid={data.speakAndSpell.childImageSharp.fluid}
-          sx={{maxWidth: 'full'}}
+          sx={{maxWidth: '50vw'}}
         />
       </Box>
     </Grid>

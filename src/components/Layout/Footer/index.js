@@ -15,7 +15,7 @@ export const Footer = () => {
         {` `}
       </Box>
       <Box>
-        <Socials sx={{}} />
+        <Socials sx={{mt: 2}} />
       </Box>
     </Box>
   )
