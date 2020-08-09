@@ -29,11 +29,13 @@ export const Videos = ({videos}) => {
         videos.map(({url, description}) => {
           const urlParsed = url && getVideoId(url)
           const videoId = urlParsed && urlParsed.id
-          const provider = url.includes('youtube')
-            ? 'youtube'
-            : url.includes('vimeo')
-            ? 'vimeo'
-            : false
+          const provider =
+            url &&
+            (url.includes('youtube')
+              ? 'youtube'
+              : url.includes('vimeo')
+              ? 'vimeo'
+              : false)
           return (
             <figure
               sx={{
