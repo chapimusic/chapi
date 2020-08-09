@@ -20,7 +20,7 @@ const AgendaPage = () => {
       }
       jouetGuitare: file(relativePath: {eq: "jouet-guitare.png"}) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 1200) {
+          fluid(quality: 100, maxWidth: 600) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -59,7 +59,12 @@ const AgendaPage = () => {
           </Box>
           <Img
             fluid={jouetGuitare.childImageSharp.fluid}
-            sx={{maxWidth: '100%', mt: 4}}
+            sx={{
+              maxWidth: '70%',
+              mt: 4,
+              transform: 'rotate(180deg)',
+              mx: 'auto',
+            }}
           />
           <Box sx={{p: 3}}>
             <BlockContent blocks={_rawPastConcerts} />
