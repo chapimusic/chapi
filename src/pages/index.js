@@ -5,7 +5,15 @@ import {Layout} from '../components/Layout'
 
 const IndexPage = () => (
   <Layout>
-    <Box sx={{bg: 'red.0', color: 'white', p: 4}}>
+    <Box
+      sx={{
+        //bg: 'red.0',
+        background: theme =>
+          `linear-gradient(${theme.colors.red[0]} 0%, ${theme.colors.purple} 90%)`,
+        color: 'white',
+        p: 4,
+      }}
+    >
       <Collector />
     </Box>
     <Box

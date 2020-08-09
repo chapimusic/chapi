@@ -47,7 +47,6 @@ export const Collector = () => {
           <AnchorLink
             href={`#preorder`}
             sx={{
-              color: 'white',
               textTransform: 'uppercase',
               textDecoration: 'none',
               borderBottom: '1px solid',
@@ -60,9 +59,10 @@ export const Collector = () => {
                 transition: 'all 0.3s ease-in',
                 transform: 'scale(1.1, 1.1)',
               },
+              '&:hover': {span: {color: 'white'}},
             }}
           >
-            Précommander
+            <span sx={{color: 'muted'}}>Précommander</span>
           </AnchorLink>
 
           <IoIosArrowDropdown />
