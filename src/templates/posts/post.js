@@ -28,7 +28,7 @@ const PostPage = ({data, errors, ...props}) => {
       {post && <Post {...post} />}
       {newerPostsNodes && newerPostsNodes.length > 0 && (
         <Box p={[4, 4, 5]}>
-          <Styled.h3>Autres nouvelles</Styled.h3>
+          <Styled.h2>Autres nouvelles</Styled.h2>
           <Posts nodes={newerPostsNodes} />
         </Box>
       )}
@@ -44,7 +44,7 @@ export const query = graphql`
     newerPosts: allSanityPost(
       filter: {id: {ne: $post}}
       sort: {order: [DESC], fields: [publishedAt]}
-      limit: 6
+      limit: 8
     ) {
       edges {
         node {

@@ -8,7 +8,7 @@ export const Story = props => {
     query {
       speakAndSpell: file(relativePath: {eq: "jouet-boite.png"}) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 100, maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -18,8 +18,8 @@ export const Story = props => {
   return (
     <Grid
       gap={2}
-      columns={[1, 'auto 300px']}
-      sx={{maxWidth: '1024px', mx: 'auto'}}
+      columns={[1, 'auto 200px', 'auto 300px']}
+      sx={{maxWidth: '1200px'}}
       {...props}
     >
       <Box sx={{zIndex: 2}}>

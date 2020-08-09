@@ -62,7 +62,7 @@ export default {
       textTransform: 'uppercase',
       fontFamily: '"Raleway", sans-serif',
       fontWeight: '800',
-      fontSize: [1, 2, 4, 5],
+      fontSize: [2, 2, 4, 5],
     },
     h3: {
       m: 0,
@@ -143,7 +143,7 @@ export default {
       },
     },
     footer: {
-      bg: 'darkblue',
+      bg: 'pink',
       color: 'white',
       a: {color: 'white'},
       p: 4,

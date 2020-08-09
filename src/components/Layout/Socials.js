@@ -10,7 +10,12 @@ import {jsx} from 'theme-ui'
 import {useSiteMetadata} from '../../lib/useSiteMetadata'
 
 const Link = ({href, children}) => (
-  <a href={href} target="_blank" rel="noreferrer">
+  <a
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+    sx={{'&:hover': {color: 'green'}}}
+  >
     {children}
   </a>
 )

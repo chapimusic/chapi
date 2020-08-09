@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import {graphql, useStaticQuery} from 'gatsby'
 import Img from 'gatsby-image'
-import {Box, Grid, Styled, jsx} from 'theme-ui'
+import {Box, Grid, jsx} from 'theme-ui'
+import {useSiteMetadata} from '../../lib/useSiteMetadata'
 
 export const Contact = props => {
   const data = useStaticQuery(graphql`
@@ -15,6 +16,7 @@ export const Contact = props => {
       }
     }
   `)
+  const {mail} = useSiteMetadata()
   return (
     <Grid gap={4} columns={[1]} sx={{maxWidth: '500px', mx: 'auto'}} {...props}>
       <Box sx={{textAlign: 'center', position: 'relative'}}>
@@ -35,17 +37,14 @@ export const Contact = props => {
           }}
         >
           <p sx={{fontSize: 4}}>
-            <a
-              href={`mailto:contact@chapimusic.com`}
-              sx={{textDecoration: 'none'}}
-            >
+            <a href={`mailto:${mail}`} sx={{textDecoration: 'none'}}>
               <span
                 sx={{
                   color: 'white',
                   textTransform: 'uppercase',
                 }}
               >
-                contact@chapimusic.com
+                {mail}
               </span>
             </a>
           </p>

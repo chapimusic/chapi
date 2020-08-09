@@ -5,7 +5,14 @@ import {Layout} from '../components/Layout'
 
 const IndexPage = () => (
   <Layout>
-    <Box sx={{bg: 'red.0', color: 'white', p: 4}}>
+    <Box
+      sx={{
+        background: theme =>
+          `linear-gradient(${theme.colors.red[0]} 0%, ${theme.colors.purple} 90%)`,
+        color: 'white',
+        p: 4,
+      }}
+    >
       <Collector />
     </Box>
     <Box
@@ -14,27 +21,27 @@ const IndexPage = () => (
         background: 'url(/arc.svg)',
         backgroundRepeat: 'repeat-y',
         height: '100%',
+        backgroundSize: '20vw',
       }}
     >
       <Box
         sx={{
           zIndex: '2',
           color: 'text',
-          p: 4,
+          py: [1, 2, 4, 4],
+          px: [1, 2, 4, 2],
         }}
       >
         <Story
           sx={{
-            background: ['rgba(255,255,255,0.45)'],
-            p: 3,
+            pl: '22vw',
           }}
         />
       </Box>
       <Box sx={{background: 'transparent', color: 'text', p: 4}}>
         <Vinyle
           sx={{
-            background: ['rgba(255,255,255,0.45)'],
-            p: 3,
+            pl: ['22vw', 3],
           }}
         />
       </Box>

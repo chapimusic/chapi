@@ -9,7 +9,7 @@ export const Vinyle = props => {
     query {
       speakAndSpell: file(relativePath: {eq: "jouet-speak-and-spell.png"}) {
         childImageSharp {
-          fluid(quality: 100) {
+          fluid(quality: 100, maxWidth: 1200) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -42,7 +42,10 @@ export const Vinyle = props => {
         <Grid gap={2} columns={[1, 1, 2]}>
           <Box>
             <p>
-              <h4>France</h4>19€ + 7,90€ de frais de livraison
+              <h4>France</h4>
+              <span sx={{color: 'muted'}}>
+                19€ + 7,90€ de frais de livraison
+              </span>
             </p>
             <form
               target="paypal"
@@ -70,7 +73,10 @@ export const Vinyle = props => {
           </Box>
           <Box>
             <p>
-              <h4>World</h4>19€ + 18,50€ including shipping costs
+              <h4>World</h4>
+              <span sx={{color: 'muted'}}>
+                19€ + 18,50€ including shipping costs
+              </span>
             </p>
             <form
               target="paypal"
@@ -97,11 +103,12 @@ export const Vinyle = props => {
             </form>
           </Box>
         </Grid>
-        <Styled.h3 sx={{color: 'red.1', p: 0}}>CD Digipack</Styled.h3>
+        <Styled.h3 sx={{color: 'red.1', p: 0, mt: 4}}>CD Digipack</Styled.h3>
         <Grid gap={2} columns={[1, 1, 2]}>
           <Box>
             <p>
-              <h4>France</h4>15 + 3€ de frais de livraison
+              <h4>France</h4>
+              <span sx={{color: 'muted'}}>15 + 3€ de frais de livraison</span>
             </p>
             <form
               target="paypal"
@@ -129,7 +136,10 @@ export const Vinyle = props => {
           </Box>
           <Box>
             <p>
-              <h4>World</h4>15 + 5,90€ including shipping costs
+              <h4>World</h4>
+              <span sx={{color: 'muted'}}>
+                15 + 5,90€ including shipping costs
+              </span>
             </p>
             <form
               target="paypal"
