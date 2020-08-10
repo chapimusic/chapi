@@ -27,7 +27,6 @@ export const Header = ({siteTitle}) => (
         }}
       >
         <Logo />
-        <h1 hidden>{siteTitle}</h1>
       </GatsbyLink>
     </div>
     <div>
