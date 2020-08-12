@@ -9,7 +9,7 @@ export const Images = ({images}) => {
       images {
         asset {
           fluid {
-            ...GatsbySanityImageFluid
+            ...GatsbySanityImageFluid_withWebp
           }
         }
         caption

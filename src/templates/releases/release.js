@@ -46,9 +46,7 @@ export const query = graphql`
     release: sanityRelease(id: {eq: $release}) {
       ...releaseFields
     }
-    products: allSanityProduct(
-      filter: {releases: {elemMatch: {id: {eq: $release}}}}
-    ) {
+    products: allSanityProduct(filter: {release: {id: {eq: $release}}}) {
       edges {
         node {
           ...productCardFields

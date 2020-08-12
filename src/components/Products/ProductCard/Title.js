@@ -9,11 +9,19 @@ export const Title = ({title, link}) => {
       <Link
         to={link}
         sx={{
-          borderBottom: '1px solid transparent',
-          ':hover': {textDecoration: 'none', borderColor: 'rgba(0,0,0,0.08)'},
+          textDecoration: 'none',
         }}
       >
-        <h2 sx={{m: 0}}>{title}</h2>
+        <h2
+          sx={{
+            m: 0,
+            fontSize: 3,
+            color: 'white',
+            variant: 'styles.raleway',
+          }}
+        >
+          {title}
+        </h2>
       </Link>
     </Fragment>
   )
