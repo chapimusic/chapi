@@ -6,7 +6,7 @@ import {Link, graphql} from 'gatsby'
 export const Image = ({image, link}) => {
   graphql`
     fragment productCardImageFields on SanityImageAsset {
-      fluid(maxHeight: 300) {
+      fluid {
         ...GatsbySanityImageFluid_withWebp
       }
     }

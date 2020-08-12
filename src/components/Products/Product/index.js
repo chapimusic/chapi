@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import {Box, jsx} from 'theme-ui'
 import {Images} from './Images'
 //import {getProductPath} from '../helpers'
+import {Player} from '../../Releases/Release'
 
 export const Product = ({
   title,
@@ -10,11 +11,15 @@ export const Product = ({
   price,
   _rawBody,
   images,
+  release: {bandcampId},
 }) => {
   graphql`
     fragment productFields on SanityProduct {
       ...productCardFields
       ...productImageFields
+      release {
+        ...releaseFields
+      }
       _rawBody
     }
   `
@@ -28,6 +33,7 @@ export const Product = ({
       </Box>
       <Box></Box>
       <Box>{price && price.formatted}</Box>
+      {bandcampId && <Player bandcampId={bandcampId} />}
     </article>
   )
 }
