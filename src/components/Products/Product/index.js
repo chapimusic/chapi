@@ -1,9 +1,11 @@
 /** @jsx jsx */
 import {graphql} from 'gatsby'
-import {Box, jsx} from 'theme-ui'
-import {Images} from './Images'
+import {Box, Grid, jsx} from 'theme-ui'
 //import {getProductPath} from '../helpers'
 import {Player} from '../../Releases/Release'
+import {Images} from './Images'
+import {Title} from './Title'
+import {Body} from './Body'
 
 export const Product = ({
   title,
@@ -27,13 +29,24 @@ export const Product = ({
   //const productPath = getProductPath({slug})
 
   return (
-    <article>
+    <Grid as="article" gap={0} columns={[1, 2, 3]}>
       <Box>
         <Images images={images} />
       </Box>
-      <Box></Box>
-      <Box>{price && price.formatted}</Box>
+      <Box
+        sx={{
+          color: 'white',
+          bg: 'red.1',
+          p: 3,
+        }}
+      >
+        <Title title={title} />
+        <p>
+          <Body raw={_rawBody} />
+        </p>
+        {price && price.formatted}
+      </Box>
       {bandcampId && <Player bandcampId={bandcampId} />}
-    </article>
+    </Grid>
   )
 }

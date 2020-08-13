@@ -10,7 +10,7 @@ export const Contact = props => {
       jouetSynth: file(relativePath: {eq: "jouet-synth.png"}) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

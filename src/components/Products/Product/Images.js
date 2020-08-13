@@ -40,12 +40,12 @@ export const Images = ({images}) => {
               fluid={image.asset.fluid}
               title={image.caption}
               alt={image.caption}
+              title={image.caption}
               sx={{
                 height: 'full',
                 width: 'full',
               }}
             />
-            <figcaption>{image.caption}</figcaption>
           </figure>
         ))}
     </div>

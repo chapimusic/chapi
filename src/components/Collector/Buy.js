@@ -10,7 +10,7 @@ export const Buy = props => {
       speakAndSpell: file(relativePath: {eq: "jouet-speak-and-spell.png"}) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -19,7 +19,7 @@ export const Buy = props => {
       ) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 400) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -28,7 +28,7 @@ export const Buy = props => {
       ) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 400) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
