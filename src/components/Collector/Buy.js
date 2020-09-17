@@ -179,7 +179,7 @@ export const Buy = props => {
               />
             </form>
             <p sx={{fontSize: 0, fontStyle: 'italic'}}>
-              Les précommandes seront expédiées en octobre.
+              Les précommandes seront expédiées en novembre.
             </p>
           </Box>
         </Grid>

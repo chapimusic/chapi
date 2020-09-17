@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {graphql} from 'gatsby'
+/*import {graphql} from 'gatsby'
 import {Box, jsx, Styled} from 'theme-ui'
 import {GraphQLErrorList} from '../../components/GraphQLErrorList'
 import SEO from '../../components/SEO'
@@ -70,3 +70,4 @@ export const query = graphql`
 `
 
 export default ReleasePage
+*/

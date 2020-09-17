@@ -36,7 +36,7 @@ export const Contact = props => {
             transform: 'translate(-50%, -50%)',
           }}
         >
-          <p sx={{fontSize: 4}}>
+          <p sx={{fontSize: 3}}>
             <a href={`mailto:${mail}`} sx={{textDecoration: 'none'}}>
               <span
                 sx={{
