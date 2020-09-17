@@ -6,6 +6,10 @@ export const Title = ({title}) => (
     sx={{
       m: 0,
       fontSize: 3,
+      bg: 'white',
+      color: 'text',
+      display: 'inline-flex',
+      p: 3,
       variant: 'styles.raleway',
     }}
   >

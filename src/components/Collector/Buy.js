@@ -68,7 +68,7 @@ export const Buy = props => {
               Vinyle blanc / 12" / Gatefold
             </Styled.h3>
             <p>
-              <span sx={{color: 'purple'}}>19€</span>
+              <span sx={{color: 'primary'}}>19€</span>
             </p>
             <form
               target="paypal"
@@ -130,7 +130,7 @@ export const Buy = props => {
               CD Digipack
             </Styled.h3>
             <p>
-              <span sx={{color: 'purple'}}>15€</span>
+              <span sx={{color: 'primary'}}>15€</span>
             </p>
             <form
               target="paypal"

@@ -8,7 +8,7 @@ export const Images = ({images}) => {
     fragment productImageFields on SanityProduct {
       images {
         asset {
-          fluid {
+          fluid(maxHeight: 500) {
             ...GatsbySanityImageFluid_withWebp
           }
         }
@@ -17,13 +17,11 @@ export const Images = ({images}) => {
     }
   `
   return (
-    <div
+    <ul
       sx={{
         width: '100%',
         position: 'relative',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        listStyle: 'none',
       }}
     >
       {images &&
@@ -48,6 +46,6 @@ export const Images = ({images}) => {
             />
           </figure>
         ))}
-    </div>
+    </ul>
   )
 }

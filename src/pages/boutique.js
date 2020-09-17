@@ -33,7 +33,7 @@ export const query = graphql`
   query BoutiquePageQuery {
     products: allSanityProduct(
       sort: {fields: [publishedAt], order: DESC}
-      filter: {slug: {current: {ne: null}}}
+      filter: {slug: {current: {ne: null}}, price: {value: {ne: 0}}}
     ) {
       edges {
         node {

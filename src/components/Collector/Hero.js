@@ -31,7 +31,7 @@ export const Hero = () => {
       <Box sx={{textAlign: 'center'}}>
         <Styled.h1>Collector</Styled.h1>
         <Styled.h2>Nouvel album</Styled.h2>
-        <Styled.h2 sx={{mt: 3}}>
+        <Styled.h2 sx={{mt: 2, mb: 3}}>
           Chapi Chapo &amp; les jouets électroniques
         </Styled.h2>
         <Img

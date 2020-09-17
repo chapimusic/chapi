@@ -1,11 +1,14 @@
 /** @jsx jsx */
+import {Fragment} from 'react'
 import {graphql} from 'gatsby'
 import {Box, Grid, jsx} from 'theme-ui'
 //import {getProductPath} from '../helpers'
 import {Player} from '../../Releases/Release'
+import {Body} from './Body'
 import {Images} from './Images'
 import {Title} from './Title'
-import {Body} from './Body'
+import {Price} from './Price'
+import Sticky from 'react-sticky-el'
 
 export const Product = ({
   title,
@@ -26,27 +29,34 @@ export const Product = ({
     }
   `
 
-  //const productPath = getProductPath({slug})
-
   return (
-    <Grid as="article" gap={0} columns={[1, 2, 3]}>
-      <Box>
-        <Images images={images} />
-      </Box>
+    <Grid
+      as="article"
+      gap={0}
+      columns={[1, 1, 2, '1fr 2fr 1fr']}
+      className="scrollarea"
+    >
       <Box
         sx={{
           color: 'white',
           bg: 'red.1',
           p: 3,
+          height: 'full',
         }}
       >
-        <Title title={title} />
-        <p>
-          <Body raw={_rawBody} />
-        </p>
-        {price && price.formatted}
+        <Sticky scrollElement=".scrollarea">
+          <Title title={title} />
+          {price && price.value > 0 && <Price price={price.formatted} />}
+          {price && price.value > 0 && <p>En stock</p>}
+        </Sticky>
       </Box>
-      {bandcampId && <Player bandcampId={bandcampId} />}
+      <Box>
+        <Images images={images} />
+      </Box>
+      <Box sx={{fontSize: '80%', px: [4, 3], display: 'grid'}}>
+        {_rawBody && <Body raw={_rawBody} />}
+        {bandcampId && <Player bandcampId={bandcampId} />}
+      </Box>
     </Grid>
   )
 }
