@@ -1,4 +1,4 @@
-import {graphql} from 'gatsby'
+/*import {graphql} from 'gatsby'
 import React from 'react'
 import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'
@@ -49,3 +49,4 @@ export const query = graphql`
 `
 
 export default Musique
+*/
