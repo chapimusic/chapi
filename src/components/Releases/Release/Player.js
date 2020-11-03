@@ -21,7 +21,7 @@ export const Player = ({bandcampId}) => {
       }}
     >
       <iframe
-        style="border: 0; width: 100%;"
+        style={{border: 0, width: '100%'}}
         src={`https://bandcamp.com/EmbeddedPlayer/album=${bandcampId.toString()}/size=large/bgcol=ffffff/linkcol=7137dc/artwork=none/transparent=true/`}
         seamless
       ></iframe>
