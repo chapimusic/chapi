@@ -4,7 +4,6 @@ export const links = [
   {url: '/boutique/', text: 'Boutique'},
   {url: '/agenda/', text: 'Agenda'},
   {url: '/spectacles/', text: 'Spectacles'},
-  {url: '/installations/', text: 'Installations'},
   {url: '/contact/', text: 'Contact'},
 ]
 

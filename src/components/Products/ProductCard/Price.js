@@ -2,5 +2,5 @@
 import {jsx} from 'theme-ui'
 
 export const Price = ({price}) => {
-  return <div>{price}</div>
+  return <p sx={{py: 1}}>{price}</p>
 }

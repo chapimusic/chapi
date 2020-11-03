@@ -50,7 +50,7 @@ export const Hero = () => {
               textTransform: 'uppercase',
               textDecoration: 'none',
               borderBottom: '1px solid',
-              borderColor: 'rgba(255,255,255,0.1)',
+              borderColor: 'rgba(255,255,255,0.5)',
               pb: 1,
               mb: 2,
               display: 'block',
@@ -62,7 +62,7 @@ export const Hero = () => {
               '&:hover': {span: {color: 'white'}},
             }}
           >
-            <span sx={{color: 'muted'}}>Précommander</span>
+            <span sx={{color: 'white'}}>Précommander</span>
           </AnchorLink>
 
           <IoIosArrowDropdown />

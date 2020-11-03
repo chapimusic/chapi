@@ -28,7 +28,7 @@ const ProductPage = ({data, errors, ...props}) => {
 
       {otherProductsNodes && otherProductsNodes.length > 0 && (
         <Box p={[4, 4, 5]}>
-          <Styled.h3>Autres produits</Styled.h3>
+          <Styled.h2>Dans la boutique</Styled.h2>
           <Products nodes={otherProductsNodes} />
         </Box>
       )}

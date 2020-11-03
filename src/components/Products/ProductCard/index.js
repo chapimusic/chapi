@@ -11,16 +11,17 @@ import {getProductPath} from '../helpers'
 
 export const ProductCard = ({
   title,
-  description,
+  _rawDescription,
   slug: {current: slug},
   price,
   previewImages,
+  paypalButtons,
 }) => {
   graphql`
     fragment productCardFields on SanityProduct {
       id
       title
-      description
+      _rawDescription
       slug {
         current
       }
@@ -32,6 +33,10 @@ export const ProductCard = ({
         asset {
           ...productCardImageFields
         }
+      }
+      paypalButtons {
+        france
+        world
       }
     }
   `
@@ -61,9 +66,13 @@ export const ProductCard = ({
         }}
       >
         <Title title={title} link={productPath} />
-        <Description description={description} />
+        <Description raw={_rawDescription} />
         <Price price={price.formatted} />
-        <Buttons link={productPath} sx={{mt: 2}} />
+        <Buttons
+          moreInfos={productPath}
+          paypalButtons={paypalButtons}
+          sx={{mt: 2}}
+        />
       </Box>
     </Grid>
   )

@@ -8,6 +8,7 @@ import {Body} from './Body'
 import {Images} from './Images'
 import {Title} from './Title'
 import {Price} from './Price'
+import {Buy} from './Buy'
 import Sticky from 'react-sticky-el'
 
 export const Product = ({
@@ -17,6 +18,7 @@ export const Product = ({
   _rawBody,
   images,
   release: {bandcampId},
+  paypalButtons,
 }) => {
   graphql`
     fragment productFields on SanityProduct {
@@ -46,15 +48,15 @@ export const Product = ({
       >
         <Sticky scrollElement=".scrollarea">
           <Title title={title} />
+          {_rawBody && <Body raw={_rawBody} />}
           {price && price.value > 0 && <Price price={price.formatted} />}
-          {price && price.value > 0 && <p>En stock</p>}
+          {paypalButtons && <Buy paypalButtons={paypalButtons} />}
         </Sticky>
       </Box>
       <Box>
         <Images images={images} />
       </Box>
       <Box sx={{fontSize: '80%', px: [4, 3], display: 'grid'}}>
-        {_rawBody && <Body raw={_rawBody} />}
         {bandcampId && <Player bandcampId={bandcampId} />}
       </Box>
     </Grid>
