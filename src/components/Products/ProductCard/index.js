@@ -47,7 +47,7 @@ export const ProductCard = ({
       gap={0}
       columns={[1, 1, 1, title.includes('Collector') ? 1 : '300px auto']}
       sx={{
-        border: theme => `2px solid ${theme.colors.primary}`,
+        border: theme => [0, 0, `2px solid ${theme.colors.primary}`],
         boxShadow: '2px 6px 14px 0px hsla(0, 0%, 0%, 0.18)',
       }}
     >

@@ -23,7 +23,9 @@ const Boutique = ({data, errors}) => {
     <Layout>
       <SEO title="Boutique" />
       <Main>
-        {productNodes && <Products nodes={productNodes} sx={{px: 4, pb: 4}} />}
+        {productNodes && (
+          <Products nodes={productNodes} sx={{px: [0, 2, 2, 4], pb: 4}} />
+        )}
       </Main>
     </Layout>
   )
