@@ -62,7 +62,7 @@ export const Hero = () => {
               '&:hover': {span: {color: 'white'}},
             }}
           >
-            <span sx={{color: 'white'}}>Précommander</span>
+            <span sx={{color: 'white'}}>Commander</span>
           </AnchorLink>
 
           <IoIosArrowDropdown />

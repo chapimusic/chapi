@@ -63,7 +63,7 @@ export const Buy = props => {
             />
           </Box>
           <Box>
-            <Styled.h2>Précommander</Styled.h2>
+            <Styled.h2>Commander</Styled.h2>
             <Styled.h3 sx={{color: 'red.1', p: 0}}>
               Vinyle blanc / 12" / Gatefold
             </Styled.h3>
@@ -83,7 +83,7 @@ export const Buy = props => {
               />
               <Button className="btn-three" sx={{mb: 2}}>
                 <FaShoppingCart />
-                <span sx={{ml: 2}}>Précommander</span>
+                <span sx={{ml: 2}}>Commander</span>
               </Button>
               <img
                 alt=""
@@ -145,7 +145,7 @@ export const Buy = props => {
               />
               <Button className="btn-three" sx={{mb: 2}}>
                 <FaShoppingCart />
-                <span sx={{ml: 2}}>Précommander</span>
+                <span sx={{ml: 2}}>Commander</span>
               </Button>
               <img
                 alt=""
@@ -179,7 +179,7 @@ export const Buy = props => {
               />
             </form>
             <p sx={{fontSize: 0, fontStyle: 'italic'}}>
-              Les précommandes seront expédiées en octobre.
+              Les commandes seront expédiées à partir du 14 novembre.
             </p>
           </Box>
         </Grid>
