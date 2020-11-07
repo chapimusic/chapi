@@ -1,5 +1,4 @@
 /** @jsx jsx */
-/*
 import {graphql} from 'gatsby'
 import {Box, Grid, jsx} from 'theme-ui'
 import {getReleasePath} from '../helpers'
@@ -51,4 +50,3 @@ export const Release = ({
     </article>
   )
 }
-*/

@@ -1,5 +1,4 @@
 /** @jsx jsx */
-/*
 import {Grid, jsx} from 'theme-ui'
 import {ReleaseCard} from './ReleaseCard'
 
@@ -12,4 +11,3 @@ export const Releases = ({title, nodes, ...props}) => (
       nodes.map(release => <ReleaseCard key={release.id} {...release} />)}
   </Grid>
 )
-*/

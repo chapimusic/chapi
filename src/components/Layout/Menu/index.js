@@ -1,7 +1,7 @@
 export const links = [
-  {url: '/', text: 'Collector'},
+  //{url: '/', text: 'Collector'},
   {url: '/nouvelles/', text: 'Nouvelles'},
-  //{url: '/boutique/', text: 'Boutique'},
+  {url: '/boutique/', text: 'Boutique'},
   {url: '/agenda/', text: 'Agenda'},
   {url: '/spectacles/', text: 'Spectacles'},
   {url: '/contact/', text: 'Contact'},

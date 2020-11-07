@@ -1,14 +1,15 @@
 /** @jsx jsx */
+import {Fragment} from 'react'
 import {graphql} from 'gatsby'
-import Sticky from 'react-sticky-el'
 import {Box, Grid, jsx} from 'theme-ui'
 //import {getProductPath} from '../helpers'
 import {Player} from '../../Releases/Release'
 import {Body} from './Body'
-import {Buy} from './Buy'
 import {Images} from './Images'
-import {Price} from './Price'
 import {Title} from './Title'
+import {Price} from './Price'
+import {Buy} from './Buy'
+import Sticky from 'react-sticky-el'
 
 export const Product = ({
   title,

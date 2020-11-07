@@ -5,8 +5,7 @@
     "**/.cache": true,
     "**/node_modules": true,
     "web/public": true,
-    "**/.lock": true,
-    "yarn.lock": true
+    "**/.lock": true
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
