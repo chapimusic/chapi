@@ -45,7 +45,7 @@ export const Hero = () => {
           }}
         >
           <AnchorLink
-            href={`#preorder`}
+            href={`#order`}
             sx={{
               textTransform: 'uppercase',
               textDecoration: 'none',

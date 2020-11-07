@@ -52,7 +52,7 @@ export const Buy = props => {
           }}
         />
       </Box>
-      <Box id="preorder" sx={{order: [0, 0, 0, 1], zIndex: 2}}>
+      <Box id="order" sx={{order: [0, 0, 0, 1], zIndex: 2}}>
         <Grid gap={2} columns={[1, 2, 2, 2]}>
           <Box>
             <Img
@@ -106,7 +106,7 @@ export const Buy = props => {
               />
               <Button className="btn-three">
                 <FaShoppingCart />
-                <span sx={{ml: 2}}>Preorder (World)</span>
+                <span sx={{ml: 2}}>Order (World)</span>
               </Button>
               <img
                 alt=""
@@ -168,7 +168,7 @@ export const Buy = props => {
               />
               <Button className="btn-three">
                 <FaShoppingCart />
-                <span sx={{ml: 2}}>Preorder (World)</span>
+                <span sx={{ml: 2}}>Order (World)</span>
               </Button>
               <img
                 alt=""
