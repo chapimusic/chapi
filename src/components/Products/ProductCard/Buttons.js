@@ -58,11 +58,13 @@ export const Buttons = ({moreInfos, paypalButtons, ...props}) => {
           </PaypalButton>
         </span>
       )}
+      {/*
       {moreInfos && (
         <span sx={{display: 'flex'}}>
           <Link href={moreInfos}>Plus d'infos</Link>
         </span>
       )}
+      */}
     </Flex>
   )
 }
