@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import {graphql} from 'gatsby'
 import {Box, jsx} from 'theme-ui'
-//import BandcampPlayer from 'react-bandcamp'
 
 export const Player = ({bandcampId}) => {
   graphql`
