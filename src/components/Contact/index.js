@@ -10,7 +10,7 @@ export const Contact = props => {
       jouetSynth: file(relativePath: {eq: "jouet-synth.png"}) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -36,7 +36,7 @@ export const Contact = props => {
             transform: 'translate(-50%, -50%)',
           }}
         >
-          <p sx={{fontSize: 3}}>
+          <p sx={{fontSize: [2, 3, 3, 4]}}>
             <a href={`mailto:${mail}`} sx={{textDecoration: 'none'}}>
               <span
                 sx={{

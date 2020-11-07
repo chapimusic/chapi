@@ -21,7 +21,7 @@ const AgendaPage = () => {
       jouetGuitare: file(relativePath: {eq: "jouet-guitare.png"}) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 600) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -66,7 +66,7 @@ const AgendaPage = () => {
               mx: 'auto',
             }}
           />
-          <Box sx={{p: 3}}>
+          <Box sx={{p: 3, mt: 3, bg: 'rgba(255,255,255,0.8)'}}>
             <BlockContent blocks={_rawPastConcerts} />
           </Box>
         </Box>

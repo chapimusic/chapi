@@ -1,3 +1,3 @@
 export function getProductPath({slug}) {
-  return `/${slug.current || slug}/`
+  return `/boutique/${slug.current || slug}/`
 }

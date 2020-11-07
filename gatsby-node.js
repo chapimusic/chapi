@@ -140,7 +140,7 @@ async function createShopProductPages(graphql, actions, reporter) {
         slug: {current: slug},
       },
     } = edge
-    const path = `/${slug}/`
+    const path = `/boutique/${slug}/`
     reporter.info(`Creating product page: ${path}`)
     createPage({
       path,
@@ -200,8 +200,8 @@ async function createShopCategoryPages(graphql, actions, reporter) {
 
 exports.createPages = async ({graphql, actions, reporter}) => {
   await createPostPages(graphql, actions, reporter)
+  await createShopProductPages(graphql, actions, reporter)
   //await createReleasePages(graphql, actions, reporter)
-  //await createShopProductPages(graphql, actions, reporter)
   //  await createShopCategoryPages(graphql, actions, reporter)
 }
 

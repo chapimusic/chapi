@@ -22,7 +22,11 @@ const Boutique = ({data, errors}) => {
   return (
     <Layout>
       <SEO title="Boutique" />
-      <Main>{productNodes && <Products nodes={productNodes} />}</Main>
+      <Main>
+        {productNodes && (
+          <Products nodes={productNodes} sx={{px: [0, 2, 2, 4], pb: 4}} />
+        )}
+      </Main>
     </Layout>
   )
 }
@@ -31,7 +35,7 @@ export const query = graphql`
   query BoutiquePageQuery {
     products: allSanityProduct(
       sort: {fields: [publishedAt], order: DESC}
-      filter: {slug: {current: {ne: null}}}
+      filter: {slug: {current: {ne: null}}, price: {value: {ne: 0}}}
     ) {
       edges {
         node {

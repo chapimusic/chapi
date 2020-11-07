@@ -6,6 +6,7 @@ import {Layout} from '../components/Layout'
 import {Main} from '../components/Layout/Main'
 import SEO from '../components/SEO'
 import {Spectacles} from '../components/Spectacles/'
+import {Installations} from '../components/Installations'
 import {mapEdgesToNodes} from '../lib/helpers'
 
 const SpectaclesPage = ({data, errors}) => {
@@ -18,6 +19,9 @@ const SpectaclesPage = ({data, errors}) => {
   }
   const spectaclesNodes = (data || {}).spectacles
     ? mapEdgesToNodes(data.spectacles)
+    : []
+  const installationsNodes = (data || {}).installations
+    ? mapEdgesToNodes(data.installations)
     : []
   return (
     <Layout>
@@ -45,6 +49,22 @@ const SpectaclesPage = ({data, errors}) => {
         </Styled.h1>
 
         {spectaclesNodes && <Spectacles nodes={spectaclesNodes} />}
+
+        <Styled.h1 sx={{textAlign: 'center'}}>
+          <span
+            sx={{
+              fontSize: 4,
+              mt: 5,
+              display: 'inline-block',
+              bg: 'white',
+              p: 3,
+            }}
+          >
+            Installations
+          </span>
+        </Styled.h1>
+
+        {installationsNodes && <Installations nodes={installationsNodes} />}
       </Main>
     </Layout>
   )
@@ -56,6 +76,13 @@ export const query = graphql`
       edges {
         node {
           ...spectacleFields
+        }
+      }
+    }
+    installations: allSanityInstallation(sort: {fields: [order], order: ASC}) {
+      edges {
+        node {
+          ...installationFields
         }
       }
     }

@@ -7,7 +7,7 @@ export const Image = ({image, link}) => {
   graphql`
     fragment productCardImageFields on SanityImageAsset {
       fluid {
-        ...GatsbySanityImageFluid
+        ...GatsbySanityImageFluid_withWebp
       }
     }
   `
@@ -16,6 +16,7 @@ export const Image = ({image, link}) => {
       fluid={image.asset.fluid}
       sx={{
         height: 'full',
+        maxHeight: 'full',
         width: 'full',
       }}
     />

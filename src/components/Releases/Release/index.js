@@ -9,6 +9,8 @@ import {Images} from './Images'
 import {Player} from './Player'
 import {Title} from './Title'
 
+export {Player} from './Player'
+
 export const Release = ({
   title,
   slug: {current: slug},
@@ -21,7 +23,7 @@ export const Release = ({
     fragment releaseFields on SanityRelease {
       ...releaseCardFields
       ...releaseImageFields
-      bandcampId
+      ...releasePlayerFields
     }
   `
   const releasePath = getReleasePath({slug})
@@ -44,9 +46,7 @@ export const Release = ({
           <Body raw={_rawBody} />
           <Date date={publishedAt} />
         </Box>
-        <Box sx={{iframe: {height: '100% !important'}}}>
-          {bandcampId && <Player album={bandcampId} />}
-        </Box>
+        <Box>{bandcampId && <Player bandcampId={bandcampId} />}</Box>
       </Grid>
     </article>
   )

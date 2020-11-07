@@ -10,7 +10,7 @@ export const Buy = props => {
       speakAndSpell: file(relativePath: {eq: "jouet-speak-and-spell.png"}) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -19,7 +19,7 @@ export const Buy = props => {
       ) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 400) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -28,7 +28,7 @@ export const Buy = props => {
       ) {
         childImageSharp {
           fluid(quality: 100, maxWidth: 400) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -68,7 +68,7 @@ export const Buy = props => {
               Vinyle blanc / 12" / Gatefold
             </Styled.h3>
             <p>
-              <span sx={{color: 'muted'}}>19€</span>
+              <span sx={{color: 'primary'}}>19€</span>
             </p>
             <form
               target="paypal"
@@ -130,7 +130,7 @@ export const Buy = props => {
               CD Digipack
             </Styled.h3>
             <p>
-              <span sx={{color: 'muted'}}>15€</span>
+              <span sx={{color: 'primary'}}>15€</span>
             </p>
             <form
               target="paypal"

@@ -7,7 +7,7 @@ export const Image = ({image, link}) => {
   graphql`
     fragment releaseCardImageFields on SanityImageAsset {
       fluid {
-        ...GatsbySanityImageFluid
+        ...GatsbySanityImageFluid_withWebp
       }
     }
   `
