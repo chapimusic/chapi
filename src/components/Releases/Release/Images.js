@@ -38,7 +38,6 @@ export const Images = ({images}) => {
             <Img
               key={image.asset.fluid.src}
               fluid={image.asset.fluid}
-              title={image.caption}
               alt={image.caption}
               sx={{
                 height: 'full',
