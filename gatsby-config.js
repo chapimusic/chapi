@@ -11,6 +11,12 @@ module.exports = {
     author: `@chapichapotoymusic`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-P7YDYNGTSX",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
