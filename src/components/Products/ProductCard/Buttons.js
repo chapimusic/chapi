@@ -16,7 +16,6 @@ const commonSx = {
   mr: 1,
   color: 'primary',
   borderRadius: 0,
-  alignItems: 'center',
   textDecoration: 'none',
   '& + button': {
     ml: 3,
@@ -27,12 +26,12 @@ const commonSx = {
     cursor: 'pointer',
   },
 }
-
+/*
 const Link = ({children, ...props}) => (
   <a sx={commonSx} {...props}>
     {children}
   </a>
-)
+)*/
 
 const Button = ({children, ...props}) => (
   <button sx={commonSx} {...props}>

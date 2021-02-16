@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import {Fragment} from 'react'
 import {graphql} from 'gatsby'
 import {Box, Grid, jsx} from 'theme-ui'
 //import {getProductPath} from '../helpers'
