@@ -68,7 +68,7 @@ export const Socials = props => {
         )}
         {spotify && (
           <li>
-            <Link href={`https://open.spotify.com/artist/${spotify}`}>
+            <Link href={`https://open.spotify.com/album/0Wf139v4PKHr3Lm9ss5vTZ`}>
               <FaSpotify />
             </Link>
           </li>

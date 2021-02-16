@@ -178,9 +178,6 @@ export const Buy = props => {
                 height="1"
               />
             </form>
-            <p sx={{fontSize: 0, fontStyle: 'italic'}}>
-              Les commandes seront expédiées à partir du 14 novembre.
-            </p>
           </Box>
         </Grid>
       </Box>
