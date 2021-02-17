@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "chapichapo",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Chai Chapo Website 2020",
+  "version": "1.0",
+  "author": "Chapi Chapo",
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
     "@theme-ui/presets": "^0.3.5",
