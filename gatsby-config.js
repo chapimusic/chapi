@@ -9,12 +9,13 @@ module.exports = {
     title: `Chapi Chapo`,
     description: `Chapi Chapo toy music`,
     author: `@chapichapotoymusic`,
+    siteUrl: 'https://chapimusic.com'
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "G-P7YDYNGTSX",
+        trackingIds: ["G-P7YDYNGTSX"],
       },
     },
     `gatsby-plugin-react-helmet`,
