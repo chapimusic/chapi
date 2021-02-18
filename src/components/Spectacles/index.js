@@ -10,7 +10,7 @@ export const Spectacles = ({title, nodes, ...props}) => (
       display: 'grid',
       gridGap: 3,
       py: 4,
-      width: '960px',
+      maxWidth: '960px',
       mx: 'auto',
     }}
   >
