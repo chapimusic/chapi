@@ -38,9 +38,8 @@ export const Story = props => {
           Tiersen), TROY VON BALTHAZAR (Chokebore)
         </p>
         <p>
-          A paraître le 06 novembre 2020 chez{' '}
-          <strong>Music From The Masses</strong>, distribution{' '}
-          <strong>[Pias]</strong>.<br />
+          <strong>Music From The Masses</strong> // distribution{' '}
+          <strong>[Pias]</strong> // 2020<br />
         </p>
         <p>
           <span sx={{color: 'gray'}}>Musique :</span> Patrice Elégoët |{' '}
