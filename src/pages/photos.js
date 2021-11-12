@@ -35,7 +35,7 @@ const PhotosPage = ({data, errors}) => {
 
 export const query = graphql`
   query PhotosPageQuery {
-    photos: allSanityPhoto(sort: {fields: [publishedAt], order: DESC}) {
+    photos: allSanityPhoto(sort: {fields: [publishedAt], order: ASC}) {
       edges {
         node {
           ...photoFields
