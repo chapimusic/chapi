@@ -1,8 +1,8 @@
 /** @jsx jsx */
-import {Styled, Box, jsx} from 'theme-ui'
+import {Themed, Box, jsx} from 'theme-ui'
 
 export const Title = ({title}) => (
-  <Styled.h1 sx={{textAlign: 'center'}}>
+  <Themed.h1 sx={{textAlign: 'center'}}>
     <span
       sx={{
         fontSize: 4,
@@ -14,5 +14,5 @@ export const Title = ({title}) => (
     >
       {title}
     </span>
-  </Styled.h1>
+  </Themed.h1>
 )

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {graphql} from 'gatsby'
-import {Box, jsx, Styled} from 'theme-ui'
+import {Box, jsx, Themed} from 'theme-ui'
 import {GraphQLErrorList} from '../../components/GraphQLErrorList'
 import SEO from '../../components/SEO'
 import {Release, Releases} from '../../components/Releases/'
@@ -33,7 +33,7 @@ const ReleasePage = ({data, errors, ...props}) => {
       )}
       {otherReleasesNodes && otherReleasesNodes.length > 0 && (
         <Box p={[4, 4, 5]}>
-          <Styled.h3>Autres albums</Styled.h3>
+          <Themed.h3>Autres albums</Themed.h3>
           <Releases nodes={otherReleasesNodes} />
         </Box>
       )}

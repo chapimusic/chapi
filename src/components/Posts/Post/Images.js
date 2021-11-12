@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui'
-import Img from 'gatsby-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
 import {graphql} from 'gatsby'
 
 export const Images = ({images}) => {
@@ -8,9 +8,7 @@ export const Images = ({images}) => {
     fragment postImageFields on SanityPost {
       images {
         asset {
-          fluid {
-            ...GatsbySanityImageFluid_withWebp
-          }
+          gatsbyImageData(placeholder: BLURRED)
         }
         caption
       }
@@ -43,9 +41,9 @@ export const Images = ({images}) => {
                 }}
               >
                 <figure>
-                  <Img
-                    key={image.asset.fluid.src}
-                    fluid={image.asset.fluid}
+                  <GatsbyImage
+                    key={image.asset.url}
+                    image={image.asset.gatsbyImageData}
                     alt={image.caption}
                     sx={{
                       height: 'full',

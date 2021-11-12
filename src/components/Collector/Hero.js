@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import {graphql, useStaticQuery} from 'gatsby'
-import Img from 'gatsby-image'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import {IoIosArrowDropdown} from 'react-icons/io'
-import {Box, Grid, jsx, Styled} from 'theme-ui'
+import {Box, Grid, jsx, Themed} from 'theme-ui'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import SEO from '../SEO'
 
@@ -13,13 +13,18 @@ export const Hero = () => {
         relativePath: {eq: "ChapoChapo_Collector_LP_3Dsimu_A_Aplati.png"}
       ) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(
+            width: 1200
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
+        }
         }
       }
     }
   `)
+
+  const collectorLPImage = getImage(data.collectorLP)
 
   return (
     <Grid gap={2} columns={[1]} sx={{maxWidth: '960px', mx: 'auto'}}>
@@ -29,13 +34,13 @@ export const Hero = () => {
         description="De brocantes en vide-greniers, le musicien finistérien amasse par centaines des jouets musicaux anciens du monde entier. Son 4ème album s'articule autour des jouets électroniques. C'est dans une marmite multicolore que prend vie Collector, un joyeux ovni qui navigue entre minimal pop, électro pop et punky pop."
       />
       <Box sx={{textAlign: 'center'}}>
-        <Styled.h1>Collector</Styled.h1>
-        <Styled.h2>Nouvel album</Styled.h2>
-        <Styled.h2 sx={{mt: 2, mb: 3}}>
+        <Themed.h1>Collector</Themed.h1>
+        <Themed.h2>Nouvel album</Themed.h2>
+        <Themed.h2 sx={{mt: 2, mb: 3}}>
           Chapi Chapo &amp; les jouets électroniques
-        </Styled.h2>
-        <Img
-          fluid={data.collectorLP.childImageSharp.fluid}
+        </Themed.h2>
+        <GatsbyImage
+          image={collectorLPImage}
           sx={{maxWidth: ['80vw', '70vw', '65vw', '55vw', '40vw'], mx: 'auto'}}
         />
         <Box
@@ -64,7 +69,6 @@ export const Hero = () => {
           >
             <span sx={{color: 'white'}}>Commander</span>
           </AnchorLink>
-
           <IoIosArrowDropdown />
         </Box>
       </Box>

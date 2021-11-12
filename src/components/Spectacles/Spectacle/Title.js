@@ -1,4 +1,4 @@
 /** @jsx jsx */
-import {Styled, jsx} from 'theme-ui'
+import {Themed, jsx} from 'theme-ui'
 
-export const Title = ({title}) => <Styled.h2 sx={{m: 0}}>{title}</Styled.h2>
+export const Title = ({title}) => <Themed.h2 sx={{m: 0}}>{title}</Themed.h2>

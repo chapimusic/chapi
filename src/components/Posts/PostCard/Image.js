@@ -1,22 +1,21 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui'
-import Img from 'gatsby-image'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import {Link, graphql} from 'gatsby'
 
 export const Image = ({image, link}) => {
   graphql`
     fragment postCardImageFields on SanityImageAsset {
-      fluid {
-        ...GatsbySanityImageFluid_withWebp
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
   `
-  const Image = () =>
-    image &&
-    image.asset &&
-    image.asset.fluid && (
-      <Img
-        fluid={image.asset.fluid}
+  const Image = () => {
+    const imageData = getImage(image)
+    return (
+      <GatsbyImage
+        image={imageData}
         sx={{
           height: 'full',
           width: 'full',
@@ -24,6 +23,7 @@ export const Image = ({image, link}) => {
         }}
       />
     )
+  }
   return link ? (
     <Link to={link}>
       <Image />

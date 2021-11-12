@@ -1,39 +1,48 @@
 /** @jsx jsx */
 import {graphql, useStaticQuery} from 'gatsby'
-import Img from 'gatsby-image'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import {FaShoppingCart} from 'react-icons/fa'
-import {Box, Button, Grid, jsx, Styled} from 'theme-ui'
+import {Box, Button, Grid, jsx, Themed} from 'theme-ui'
 
 export const Buy = props => {
   const {speakAndSpell, cdPreview, lpPreview} = useStaticQuery(graphql`
     query {
       speakAndSpell: file(relativePath: {eq: "jouet-speak-and-spell.png"}) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 1200) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(
+            width: 1200
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
       cdPreview: file(
         relativePath: {eq: "ChapoChapo_Collector_CD_3Dsimu_A.png"}
       ) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 400) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(
+            width: 400
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
       lpPreview: file(
         relativePath: {eq: "ChapoChapo_Collector_LP_3Dsimu_B_aplati.png"}
       ) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 400) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(
+            width: 400
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }
   `)
+  const speakAndSpellImage = getImage(speakAndSpell)
+  const lpPreviewImage = getImage(lpPreview)
+  const cdPreviewImage = getImage(cdPreview)
   return (
     <Grid
       gap={4}
@@ -45,8 +54,8 @@ export const Buy = props => {
       {...props}
     >
       <Box sx={{order: [1, 1, 1, 0], zIndex: 1}}>
-        <Img
-          fluid={speakAndSpell.childImageSharp.fluid}
+        <GatsbyImage
+          image={speakAndSpellImage}
           sx={{
             maxWidth: '300px',
           }}
@@ -55,18 +64,18 @@ export const Buy = props => {
       <Box id="order" sx={{order: [0, 0, 0, 1], zIndex: 2}}>
         <Grid gap={2} columns={[1, 2, 2, 2]}>
           <Box>
-            <Img
-              fluid={lpPreview.childImageSharp.fluid}
+            <GatsbyImage
+              image={lpPreviewImage}
               sx={{
                 maxWidth: '400px',
               }}
             />
           </Box>
           <Box>
-            <Styled.h2>Commander</Styled.h2>
-            <Styled.h3 sx={{color: 'red.1', p: 0}}>
+            <Themed.h2>Commander</Themed.h2>
+            <Themed.h3 sx={{color: 'red.1', p: 0}}>
               Vinyle blanc / 12" / Gatefold
-            </Styled.h3>
+            </Themed.h3>
             <p>
               <span sx={{color: 'primary'}}>19€</span>
             </p>
@@ -118,17 +127,17 @@ export const Buy = props => {
             </form>
           </Box>
           <Box>
-            <Img
-              fluid={cdPreview.childImageSharp.fluid}
+            <GatsbyImage
+              image={cdPreviewImage}
               sx={{
                 maxWidth: '400px',
               }}
             />
           </Box>
           <Box>
-            <Styled.h3 sx={{color: 'red.1', p: 0, mt: 4}}>
+            <Themed.h3 sx={{color: 'red.1', p: 0, mt: 4}}>
               CD Digipack
-            </Styled.h3>
+            </Themed.h3>
             <p>
               <span sx={{color: 'primary'}}>15€</span>
             </p>

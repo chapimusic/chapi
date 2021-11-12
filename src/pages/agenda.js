@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import {graphql, useStaticQuery} from 'gatsby'
-import Img from 'gatsby-image'
-import {Box, jsx, Styled} from 'theme-ui'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
+import {Box, jsx, Themed} from 'theme-ui'
 import {BlockContent} from '../components/BlockContent'
 import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'
@@ -20,9 +20,11 @@ const AgendaPage = () => {
       }
       jouetGuitare: file(relativePath: {eq: "jouet-guitare.png"}) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 600) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(
+            width: 600
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }
@@ -40,7 +42,7 @@ const AgendaPage = () => {
           height: '100%',
         }}
       >
-        <Styled.h1 sx={{textAlign: 'center'}}>
+        <Themed.h1 sx={{textAlign: 'center'}}>
           <span
             sx={{
               fontSize: 4,
@@ -52,13 +54,13 @@ const AgendaPage = () => {
           >
             Agenda
           </span>
-        </Styled.h1>
+        </Themed.h1>
         <Box sx={{p: 4, maxWidth: '960px', mx: 'auto'}}>
           <Box sx={{bg: 'red.1', color: 'white', p: 3}}>
             <BlockContent blocks={_rawUpcomingConcerts} />
           </Box>
-          <Img
-            fluid={jouetGuitare.childImageSharp.fluid}
+          <GatsbyImage
+            image={getImage(jouetGuitare)}
             sx={{
               maxWidth: '70%',
               mt: 4,

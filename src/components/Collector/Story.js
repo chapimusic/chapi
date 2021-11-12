@@ -1,20 +1,23 @@
 /** @jsx jsx */
 import {graphql, useStaticQuery} from 'gatsby'
-import Img from 'gatsby-image'
-import {Box, Grid, jsx, Styled} from 'theme-ui'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
+import {Box, Grid, jsx, Themed} from 'theme-ui'
 
 export const Story = props => {
   const data = useStaticQuery(graphql`
     query {
       speakAndSpell: file(relativePath: {eq: "jouet-boite.png"}) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(
+            width: 500
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
       }
     }
   `)
+  const speakAndSpellImage = getImage(data.speakAndSpell)
   return (
     <Grid
       gap={2}
@@ -30,7 +33,7 @@ export const Story = props => {
           multicolore que prend vie <strong>Collector</strong>, un joyeux ovni
           qui navigue entre minimal pop, électro pop et punky pop."
         </p>
-        <Styled.h4>73 jouets musicaux vintage à l'intérieur !</Styled.h4>
+        <Themed.h4>73 jouets musicaux vintage à l'intérieur !</Themed.h4>
         <p>
           Avec la participation de MAXWELL FARRINGTON (Dewaere), LAETITIA
           SHERIFF, JAD FAIR (Half Japanese), RACHEL BARREDA HORWOOD (Trash Kit,
@@ -39,7 +42,8 @@ export const Story = props => {
         </p>
         <p>
           <strong>Music From The Masses</strong> // distribution{' '}
-          <strong>[Pias]</strong> // 2020<br />
+          <strong>[Pias]</strong> // 2020
+          <br />
         </p>
         <p>
           <span sx={{color: 'gray'}}>Musique :</span> Patrice Elégoët |{' '}
@@ -51,10 +55,7 @@ export const Story = props => {
         </p>
       </Box>
       <Box sx={{zIndex: 2}}>
-        <Img
-          fluid={data.speakAndSpell.childImageSharp.fluid}
-          sx={{maxWidth: '50vw'}}
-        />
+        <GatsbyImage image={speakAndSpellImage} sx={{maxWidth: '50vw'}} />
       </Box>
     </Grid>
   )

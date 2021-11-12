@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {graphql} from 'gatsby'
-import {Box, jsx, Styled} from 'theme-ui'
+import {Box, jsx, Themed} from 'theme-ui'
 import {GraphQLErrorList} from '../../components/GraphQLErrorList'
 import SEO from '../../components/SEO'
 import {Post} from '../../components/Posts/Post'
@@ -28,7 +28,7 @@ const PostPage = ({data, errors, ...props}) => {
       {post && <Post {...post} />}
       {newerPostsNodes && newerPostsNodes.length > 0 && (
         <Box p={[4, 4, 5]}>
-          <Styled.h2>Autres nouvelles</Styled.h2>
+          <Themed.h2>Autres nouvelles</Themed.h2>
           <Posts nodes={newerPostsNodes} />
         </Box>
       )}

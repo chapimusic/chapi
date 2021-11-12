@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui'
-import Img from 'gatsby-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
 import {graphql} from 'gatsby'
 
 export const Images = ({images}) => {
@@ -8,9 +8,8 @@ export const Images = ({images}) => {
     fragment installationImageFields on SanityInstallation {
       images {
         asset {
-          fluid {
-            ...GatsbySanityImageFluid_withWebp
-          }
+          gatsbyImageData(placeholder: BLURRED)
+          url
         }
         caption
       }
@@ -32,10 +31,7 @@ export const Images = ({images}) => {
         images.length > 0 &&
         images.map(
           image =>
-            image &&
-            image.asset &&
-            image.asset.fluid &&
-            image.asset.fluid.src && (
+            image?.asset?.url && (
               <li
                 sx={{
                   height: 'full',
@@ -43,9 +39,9 @@ export const Images = ({images}) => {
                 }}
               >
                 <figure>
-                  <Img
-                    key={image.asset.fluid.src}
-                    fluid={image.asset.fluid}
+                  <GatsbyImage
+                    key={image.asset.url}
+                    image={image.asset.gatsbyImageData}
                     alt={image.caption}
                     sx={{
                       height: 'full',

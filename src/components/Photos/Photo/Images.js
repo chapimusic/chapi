@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui'
-import Img from 'gatsby-image'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import {graphql} from 'gatsby'
 
 export const Images = ({images}) => {
@@ -9,8 +9,13 @@ export const Images = ({images}) => {
       images {
         asset {
           url
-          fluid(maxWidth: 400, maxHeight: 400) {
-            ...GatsbySanityImageFluid_withWebp
+          childImageSharp {
+            gatsbyImageData(
+              width: 400
+              height: 400
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
         caption
@@ -31,39 +36,36 @@ export const Images = ({images}) => {
     >
       {images &&
         images.length > 0 &&
-        images.map(
-          image =>
-            image &&
-            image.asset &&
-            image.asset.fluid &&
-            image.asset.fluid.src && (
-              <li
-                sx={{
-                  height: 'full',
-                  width: 'full',
-                }}
-              >
-                <figure sx={{bg: 'white'}}>
-                  <a href={image.asset.url} target="_blank">
-                    <Img
-                      key={image.asset.fluid.src}
-                      fluid={image.asset.fluid}
-                      alt={image.caption}
-                      sx={{
-                        height: 'full',
-                        width: 'full',
-                      }}
-                    />
-                  </a>
-                  {image.caption && image.caption.replace(/\s/g, '') !== '' && (
-                    <figcaption sx={{p: 2, color: 'black', fontSize: 0}}>
-                      {image.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              </li>
-            )
-        )}
+        images.map(image => {
+          const imageData = getImage(image)
+          imageData ? (
+            <li
+              sx={{
+                height: 'full',
+                width: 'full',
+              }}
+            >
+              <figure sx={{bg: 'white'}}>
+                <a href={image.asset.url} target="_blank">
+                  <GatsbyImage
+                    key={image.asset.url}
+                    image={imageData}
+                    alt={image.caption}
+                    sx={{
+                      height: 'full',
+                      width: 'full',
+                    }}
+                  />
+                </a>
+                {image.caption && image.caption.replace(/\s/g, '') !== '' && (
+                  <figcaption sx={{p: 2, color: 'black', fontSize: 0}}>
+                    {image.caption}
+                  </figcaption>
+                )}
+              </figure>
+            </li>
+          ) : null
+        })}
     </ul>
   )
 }

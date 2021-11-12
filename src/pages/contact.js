@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {Box, Styled, jsx} from 'theme-ui'
+import {Box, Themed, jsx} from 'theme-ui'
 import {Contact} from '../components/Contact'
 import {Layout} from '../components/Layout'
 import SEO from '../components/SEO'
@@ -16,7 +16,7 @@ const ContactPage = () => (
       }}
     >
       <SEO title="Contact" />
-      <Styled.h1 sx={{textAlign: 'center', mb: 4}}>
+      <Themed.h1 sx={{textAlign: 'center', mb: 4}}>
         <span
           sx={{
             fontSize: 4,
@@ -28,7 +28,7 @@ const ContactPage = () => (
         >
           Contact
         </span>
-      </Styled.h1>
+      </Themed.h1>
       <Contact />
     </Box>
   </Layout>

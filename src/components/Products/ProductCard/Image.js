@@ -1,19 +1,19 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui'
-import Img from 'gatsby-image'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import {Link, graphql} from 'gatsby'
 
 export const Image = ({image, link}) => {
   graphql`
     fragment productCardImageFields on SanityImageAsset {
-      fluid {
-        ...GatsbySanityImageFluid_withWebp
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
   `
   const Image = () => (
-    <Img
-      fluid={image.asset.fluid}
+    <GatsbyImage
+      image={getImage(image)}
       sx={{
         height: 'full',
         maxHeight: 'full',

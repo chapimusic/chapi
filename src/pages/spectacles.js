@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {graphql} from 'gatsby'
-import {Styled, jsx} from 'theme-ui'
+import {Themed, jsx} from 'theme-ui'
 import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'
 import {Main} from '../components/Layout/Main'
@@ -34,7 +34,7 @@ const SpectaclesPage = ({data, errors}) => {
           height: '100%',
         }}
       >
-        <Styled.h1 sx={{textAlign: 'center'}}>
+        <Themed.h1 sx={{textAlign: 'center'}}>
           <span
             sx={{
               fontSize: 4,
@@ -46,11 +46,11 @@ const SpectaclesPage = ({data, errors}) => {
           >
             Spectacles pour petits et grands
           </span>
-        </Styled.h1>
+        </Themed.h1>
 
         {spectaclesNodes && <Spectacles nodes={spectaclesNodes} />}
 
-        <Styled.h1 sx={{textAlign: 'center'}}>
+        <Themed.h1 sx={{textAlign: 'center'}}>
           <span
             sx={{
               fontSize: 4,
@@ -62,7 +62,7 @@ const SpectaclesPage = ({data, errors}) => {
           >
             Installations
           </span>
-        </Styled.h1>
+        </Themed.h1>
 
         {installationsNodes && <Installations nodes={installationsNodes} />}
       </Main>

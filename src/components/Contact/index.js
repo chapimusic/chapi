@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {graphql, useStaticQuery} from 'gatsby'
-import Img from 'gatsby-image'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import {Box, Grid, jsx} from 'theme-ui'
 import {useSiteMetadata} from '../../lib/useSiteMetadata'
 
@@ -9,21 +9,17 @@ export const Contact = props => {
     query {
       jouetSynth: file(relativePath: {eq: "jouet-synth.png"}) {
         childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
         }
       }
     }
   `)
   const {mail} = useSiteMetadata()
+  const jouetSynthImage = getImage(data.jouetSynth)
   return (
     <Grid gap={4} columns={[1]} sx={{maxWidth: '500px', mx: 'auto'}} {...props}>
       <Box sx={{textAlign: 'center', position: 'relative'}}>
-        <Img
-          fluid={data.jouetSynth.childImageSharp.fluid}
-          sx={{maxWidth: '100%'}}
-        />
+        <GatsbyImage image={jouetSynthImage} sx={{maxWidth: '100%'}} />
         <Box
           sx={{
             textAlign: 'center',

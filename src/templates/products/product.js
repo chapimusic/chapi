@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {graphql} from 'gatsby'
-import {Box, jsx, Styled} from 'theme-ui'
+import {Box, jsx, Themed} from 'theme-ui'
 import {GraphQLErrorList} from '../../components/GraphQLErrorList'
 import SEO from '../../components/SEO'
 import {Product, Products} from '../../components/Products/'
@@ -28,7 +28,7 @@ const ProductPage = ({data, errors, ...props}) => {
 
       {otherProductsNodes && otherProductsNodes.length > 0 && (
         <Box p={[4, 4, 5]}>
-          <Styled.h2>Dans la boutique</Styled.h2>
+          <Themed.h2>Dans la boutique</Themed.h2>
           <Products nodes={otherProductsNodes} />
         </Box>
       )}

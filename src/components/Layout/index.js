@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import 'normalize.css'
 import React, {useState} from 'react'
-import {jsx, Styled} from 'theme-ui'
+import {jsx, Themed} from 'theme-ui'
 import {useSiteMetadata} from '../../lib/useSiteMetadata'
 import {Footer} from './Footer'
 import {Header} from './Header'
@@ -23,7 +23,7 @@ export const Layout = ({children}) => {
       }}
     >
       <MobileMenu />
-      <Styled.root>
+      <Themed.root>
         <div
           sx={{
             variant: 'layout.container',
@@ -33,7 +33,7 @@ export const Layout = ({children}) => {
           <Main>{children}</Main>
           <Footer />
         </div>
-      </Styled.root>
+      </Themed.root>
     </MenuContext.Provider>
   )
 }

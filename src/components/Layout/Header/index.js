@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import {Link as GatsbyLink} from 'gatsby'
-import {jsx, Styled} from 'theme-ui'
+import {jsx, Themed} from 'theme-ui'
 import {MobileMenuButton} from '../Menu'
 import {Logo} from './Logo'
 import {Desktop as DesktopMenu} from '../Menu'
 import {Socials} from '../Socials'
 
 export const Header = ({siteTitle}) => (
-  <Styled.div
+  <Themed.div
     as="header"
     sx={{
       display: 'grid',
@@ -52,5 +52,5 @@ export const Header = ({siteTitle}) => (
         }}
       />
     </div>
-  </Styled.div>
+  </Themed.div>
 )
