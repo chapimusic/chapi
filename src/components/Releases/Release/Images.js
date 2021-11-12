@@ -8,9 +8,7 @@ export const Images = ({images}) => {
     fragment releaseImageFields on SanityRelease {
       images {
         asset {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-          }
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           url
         }
         caption

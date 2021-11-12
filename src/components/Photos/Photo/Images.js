@@ -9,14 +9,12 @@ export const Images = ({images}) => {
       images {
         asset {
           url
-          childImageSharp {
-            gatsbyImageData(
-              width: 400
-              height: 400
-              placeholder: BLURRED
-              formats: [AUTO, WEBP, AVIF]
-            )
-          }
+          gatsbyImageData(
+            width: 400
+            height: 400
+            placeholder: BLURRED
+            formats: [AUTO, WEBP, AVIF]
+          )
         }
         caption
       }
@@ -37,8 +35,8 @@ export const Images = ({images}) => {
       {images &&
         images.length > 0 &&
         images.map(image => {
-          const imageData = getImage(image)
-          imageData ? (
+          const imageData = getImage(image.asset)
+          return imageData ? (
             <li
               sx={{
                 height: 'full',
@@ -46,7 +44,7 @@ export const Images = ({images}) => {
               }}
             >
               <figure sx={{bg: 'white'}}>
-                <a href={image.asset.url} target="_blank">
+                <a href={image.asset.url} target="_blank" rel="noreferrer">
                   <GatsbyImage
                     key={image.asset.url}
                     image={imageData}

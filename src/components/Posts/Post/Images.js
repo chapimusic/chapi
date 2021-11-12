@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import {jsx} from 'theme-ui'
-import {GatsbyImage} from 'gatsby-plugin-image'
+import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import {graphql} from 'gatsby'
 
 export const Images = ({images}) => {
@@ -9,6 +9,7 @@ export const Images = ({images}) => {
       images {
         asset {
           gatsbyImageData(placeholder: BLURRED)
+          url
         }
         caption
       }
@@ -30,10 +31,7 @@ export const Images = ({images}) => {
         images.length > 0 &&
         images.map(
           image =>
-            image &&
-            image.asset &&
-            image.asset.fluid &&
-            image.asset.fluid.src && (
+            image?.asset?.url && (
               <li
                 sx={{
                   height: 'full',
@@ -43,7 +41,7 @@ export const Images = ({images}) => {
                 <figure>
                   <GatsbyImage
                     key={image.asset.url}
-                    image={image.asset.gatsbyImageData}
+                    image={getImage(image.asset)}
                     alt={image.caption}
                     sx={{
                       height: 'full',

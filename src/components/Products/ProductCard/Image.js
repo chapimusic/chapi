@@ -6,14 +6,12 @@ import {Link, graphql} from 'gatsby'
 export const Image = ({image, link}) => {
   graphql`
     fragment productCardImageFields on SanityImageAsset {
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-      }
+      gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
     }
   `
   const Image = () => (
     <GatsbyImage
-      image={getImage(image)}
+      image={getImage(image.asset)}
       sx={{
         height: 'full',
         maxHeight: 'full',

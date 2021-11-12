@@ -9,13 +9,13 @@ module.exports = {
     title: `Chapi Chapo`,
     description: `Chapi Chapo toy music`,
     author: `@chapichapotoymusic`,
-    siteUrl: 'https://chapimusic.com'
+    siteUrl: 'https://chapimusic.com',
   },
   plugins: [
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ["G-P7YDYNGTSX"],
+        trackingIds: ['G-P7YDYNGTSX'],
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -26,8 +26,9 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -6,13 +6,12 @@ import {Link, graphql} from 'gatsby'
 export const Image = ({image, link}) => {
   graphql`
     fragment postCardImageFields on SanityImageAsset {
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-      }
+      gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
     }
   `
   const Image = () => {
-    const imageData = getImage(image)
+    const imageData = getImage(image.asset)
+
     return (
       <GatsbyImage
         image={imageData}

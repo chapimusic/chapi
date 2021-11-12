@@ -8,9 +8,7 @@ export const Images = ({images}) => {
     fragment productImageFields on SanityProduct {
       images {
         asset {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-          }
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           url
         }
         caption
@@ -28,7 +26,7 @@ export const Images = ({images}) => {
       {images &&
         images.length > 0 &&
         images.map(image => {
-          const imageData = getImage(image)
+          const imageData = getImage(image.asset)
           return (
             <figure
               sx={{
