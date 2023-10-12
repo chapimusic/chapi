@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import {Box, Themed, jsx} from 'theme-ui'
+import {Box, jsx} from 'theme-ui'
+import {Themed} from '@theme-ui/mdx'
 import {Contact} from '../components/Contact'
 import {Layout} from '../components/Layout'
 import SEO from '../components/SEO'

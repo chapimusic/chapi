@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import {graphql} from 'gatsby'
-import {Themed, jsx} from 'theme-ui'
+import {jsx} from 'theme-ui'
+import {Themed} from '@theme-ui/mdx'
 import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'
 import {Main} from '../components/Layout/Main'

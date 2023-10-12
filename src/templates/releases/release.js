@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import {graphql} from 'gatsby'
-import {Box, jsx, Themed} from 'theme-ui'
+import {Box, jsx} from 'theme-ui'
+import {Themed} from '@theme-ui/mdx'
 import {GraphQLErrorList} from '../../components/GraphQLErrorList'
 import SEO from '../../components/SEO'
 import {Release, Releases} from '../../components/Releases/'

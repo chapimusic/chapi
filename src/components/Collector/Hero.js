@@ -2,7 +2,8 @@
 import {graphql, useStaticQuery} from 'gatsby'
 import {GatsbyImage, getImage, getSrc} from 'gatsby-plugin-image'
 import {IoIosArrowDropdown} from 'react-icons/io'
-import {Box, Grid, jsx, Themed} from 'theme-ui'
+import {Box, Grid, jsx} from 'theme-ui'
+import {Themed} from '@theme-ui/mdx'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Seo from '../SEO'
 

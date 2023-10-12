@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import 'normalize.css'
 import React, {useState} from 'react'
-import {jsx, Themed} from 'theme-ui'
+import {jsx} from 'theme-ui'
+import {Themed} from '@theme-ui/mdx'
 import {useSiteMetadata} from '../../lib/useSiteMetadata'
 import {Footer} from './Footer'
 import {Header} from './Header'

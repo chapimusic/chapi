@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import {graphql, useStaticQuery} from 'gatsby'
 import {GatsbyImage, getImage} from 'gatsby-plugin-image'
-import {Box, jsx, Themed} from 'theme-ui'
+import {Box, jsx} from 'theme-ui'
+import {Themed} from '@theme-ui/mdx'
 import {BlockContent} from '../components/BlockContent'
 import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'

@@ -1,12 +1,13 @@
 /** @jsx jsx */
 import {graphql} from 'gatsby'
-import {Themed, jsx} from 'theme-ui'
+import {jsx} from 'theme-ui'
 import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'
 import {Main} from '../components/Layout/Main'
 import SEO from '../components/SEO'
 import {Photos} from '../components/Photos/'
 import {mapEdgesToNodes} from '../lib/helpers'
+import {Themed} from '@theme-ui/mdx'
 
 const PhotosPage = ({data, errors}) => {
   if (errors) {

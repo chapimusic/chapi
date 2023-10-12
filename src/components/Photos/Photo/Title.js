@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import {jsx, Themed} from 'theme-ui'
+import {jsx} from 'theme-ui'
+import {Themed} from '@theme-ui/mdx'
 
 export const Title = ({title}) => (
   <Themed.h1 sx={{textAlign: 'center'}}>

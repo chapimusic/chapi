@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import {graphql, useStaticQuery} from 'gatsby'
 import {GatsbyImage, getImage} from 'gatsby-plugin-image'
-import {Box, Grid, jsx, Themed} from 'theme-ui'
+import {Box, Grid, jsx} from 'theme-ui'
+import {Themed} from '@theme-ui/mdx'
 
 export const Story = props => {
   const data = useStaticQuery(graphql`

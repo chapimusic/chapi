@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import {Link as GatsbyLink} from 'gatsby'
-import {jsx, Themed} from 'theme-ui'
+import {jsx} from 'theme-ui'
+import {Themed} from '@theme-ui/mdx'
 import {MobileMenuButton} from '../Menu'
 import {Logo} from './Logo'
 import {Desktop as DesktopMenu} from '../Menu'
