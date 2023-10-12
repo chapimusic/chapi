@@ -48,16 +48,14 @@ const VideosPage = ({data, errors}) => {
   )
 }
 
-export const query = graphql`
-  query VideosPageQuery {
-    videos: allSanityVideos(sort: {fields: [publishedAt], order: DESC}) {
-      edges {
-        node {
-          ...videoFields
-        }
+export const query = graphql`query VideosPageQuery {
+  videos: allSanityVideos(sort: {publishedAt: DESC}) {
+    edges {
+      node {
+        ...videoFields
       }
     }
   }
-`
+}`
 
 export default VideosPage

@@ -27,19 +27,17 @@ const Nouvelles = ({data, errors}) => {
   )
 }
 
-export const query = graphql`
-  query PostsPageQuery {
-    posts: allSanityPost(
-      sort: {fields: [publishedAt], order: DESC}
-      filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
-    ) {
-      edges {
-        node {
-          ...postCardFields
-        }
+export const query = graphql`query PostsPageQuery {
+  posts: allSanityPost(
+    sort: {publishedAt: DESC}
+    filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
+  ) {
+    edges {
+      node {
+        ...postCardFields
       }
     }
   }
-`
+}`
 
 export default Nouvelles

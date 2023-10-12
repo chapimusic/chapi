@@ -41,30 +41,28 @@ const ReleasePage = ({data, errors, ...props}) => {
   )
 }
 
-export const query = graphql`
-  query ReleasePage($release: String) {
-    release: sanityRelease(id: {eq: $release}) {
-      ...releaseFields
-    }
-    products: allSanityProduct(filter: {release: {id: {eq: $release}}}) {
-      edges {
-        node {
-          ...productCardFields
-        }
-      }
-    }
-    otherReleases: allSanityRelease(
-      filter: {id: {ne: $release}}
-      sort: {order: [DESC], fields: [publishedAt]}
-      limit: 6
-    ) {
-      edges {
-        node {
-          ...releaseCardFields
-        }
+export const query = graphql`query ReleasePage($release: String) {
+  release: sanityRelease(id: {eq: $release}) {
+    ...releaseFields
+  }
+  products: allSanityProduct(filter: {release: {id: {eq: $release}}}) {
+    edges {
+      node {
+        ...productCardFields
       }
     }
   }
-`
+  otherReleases: allSanityRelease(
+    filter: {id: {ne: $release}}
+    sort: {publishedAt: DESC}
+    limit: 6
+  ) {
+    edges {
+      node {
+        ...releaseCardFields
+      }
+    }
+  }
+}`
 
 export default ReleasePage

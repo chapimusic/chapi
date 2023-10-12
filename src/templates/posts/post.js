@@ -36,23 +36,21 @@ const PostPage = ({data, errors, ...props}) => {
   )
 }
 
-export const query = graphql`
-  query PostPage($post: String) {
-    post: sanityPost(id: {eq: $post}) {
-      ...postFields
-    }
-    newerPosts: allSanityPost(
-      filter: {id: {ne: $post}}
-      sort: {order: [DESC], fields: [publishedAt]}
-      limit: 8
-    ) {
-      edges {
-        node {
-          ...postCardFields
-        }
+export const query = graphql`query PostPage($post: String) {
+  post: sanityPost(id: {eq: $post}) {
+    ...postFields
+  }
+  newerPosts: allSanityPost(
+    filter: {id: {ne: $post}}
+    sort: {publishedAt: DESC}
+    limit: 8
+  ) {
+    edges {
+      node {
+        ...postCardFields
       }
     }
   }
-`
+}`
 
 export default PostPage

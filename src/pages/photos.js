@@ -33,16 +33,14 @@ const PhotosPage = ({data, errors}) => {
   )
 }
 
-export const query = graphql`
-  query PhotosPageQuery {
-    photos: allSanityPhoto(sort: {fields: [publishedAt], order: ASC}) {
-      edges {
-        node {
-          ...photoFields
-        }
+export const query = graphql`query PhotosPageQuery {
+  photos: allSanityPhoto(sort: {publishedAt: ASC}) {
+    edges {
+      node {
+        ...photoFields
       }
     }
   }
-`
+}`
 
 export default PhotosPage

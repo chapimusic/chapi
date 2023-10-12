@@ -70,23 +70,21 @@ const SpectaclesPage = ({data, errors}) => {
   )
 }
 
-export const query = graphql`
-  query SpectaclesPageQuery {
-    spectacles: allSanitySpectacle(sort: {fields: [order], order: ASC}) {
-      edges {
-        node {
-          ...spectacleFields
-        }
-      }
-    }
-    installations: allSanityInstallation(sort: {fields: [order], order: ASC}) {
-      edges {
-        node {
-          ...installationFields
-        }
+export const query = graphql`query SpectaclesPageQuery {
+  spectacles: allSanitySpectacle(sort: {order: ASC}) {
+    edges {
+      node {
+        ...spectacleFields
       }
     }
   }
-`
+  installations: allSanityInstallation(sort: {order: ASC}) {
+    edges {
+      node {
+        ...installationFields
+      }
+    }
+  }
+}`
 
 export default SpectaclesPage
