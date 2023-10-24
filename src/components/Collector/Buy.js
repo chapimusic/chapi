@@ -3,7 +3,7 @@ import {graphql, useStaticQuery} from 'gatsby'
 import {GatsbyImage, getImage} from 'gatsby-plugin-image'
 import {FaShoppingCart} from 'react-icons/fa'
 import {Box, Button, Grid, jsx} from 'theme-ui'
-import { Themed } from '@theme-ui/mdx'
+import {Themed} from '@theme-ui/mdx'
 
 export const Buy = props => {
   const {speakAndSpell, cdPreview, lpPreview} = useStaticQuery(graphql`
