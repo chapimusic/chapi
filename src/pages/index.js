@@ -1,52 +1,43 @@
-/** @jsx jsx */
-import {Box, jsx} from 'theme-ui'
-import {Hero, Buy, Story} from '../components/Collector'
+import {graphql} from 'gatsby'
+import React from 'react'
+import {GraphQLErrorList} from '../components/GraphQLErrorList'
 import {Layout} from '../components/Layout'
+import {Main} from '../components/Layout/Main'
+import {Posts} from '../components/Posts/'
+import SEO from '../components/SEO'
+import {filterOutDocsWithoutSlugs, mapEdgesToNodes} from '../lib/helpers'
 
-const IndexPage = () => (
-  <Layout>
-    <Box
-      sx={{
-        background: theme =>
-          `linear-gradient(${theme.colors.red[0]} 0%, ${theme.colors.purple} 90%)`,
-        color: 'white',
-        p: 4,
-      }}
-    >
-      <Hero />
-    </Box>
-    <Box
-      sx={{
-        position: 'relative',
-        background: 'url(/arc.svg)',
-        backgroundRepeat: 'repeat-y',
-        height: '100%',
-        backgroundSize: '20vw',
-      }}
-    >
-      <Box
-        sx={{
-          zIndex: '2',
-          color: 'text',
-          py: [1, 2, 4, 4],
-          px: [1, 2, 4, 2],
-        }}
-      >
-        <Story
-          sx={{
-            pl: '22vw',
-          }}
-        />
-      </Box>
-      <Box sx={{background: 'transparent', color: 'text', p: 4}}>
-        <Buy
-          sx={{
-            pl: ['22vw', 3],
-          }}
-        />
-      </Box>
-    </Box>
-  </Layout>
-)
+const Nouvelles = ({data, errors}) => {
+  if (errors) {
+    return (
+      <Layout>
+        <GraphQLErrorList errors={errors} />
+      </Layout>
+    )
+  }
+  const postNodes = (data || {}).posts
+    ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
+    : []
 
-export default IndexPage
+  return (
+    <Layout>
+      <SEO title="Nouvelles" />
+      <Main sx={{px: 3}}>{postNodes && <Posts nodes={postNodes} />}</Main>
+    </Layout>
+  )
+}
+
+export const query = graphql`query PostsPageQuery {
+  posts: allSanityPost(
+    sort: {publishedAt: DESC}
+    filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}
+  ) {
+    edges {
+      node {
+        ...postCardFields
+      }
+    }
+  }
+}`
+
+export default Nouvelles
