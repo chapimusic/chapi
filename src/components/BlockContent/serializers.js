@@ -12,7 +12,7 @@ const serializers = {
       // Read https://css-tricks.com/use-target_blank/
       const {blank, href} = mark
       return blank ? (
-        <a href={href} target="_blank" rel="noopener">
+        <a href={href} target="_blank" rel="noreferrer">
           {children}
         </a>
       ) : (
